@@ -1,0 +1,24 @@
+<% title "Keywords" %>
+
+Keywords are how we search for users for to connect you with.  Pick some keywords below
+<table>
+  <tr>
+    <td style="padding-right: 36px;" valign="top"><p class="keyword-header">Currently using...</p>
+        <% for keyword in @my_keywords %>
+                  <p><%= keyword.word %> <%= link_to "Remove" ,:action=>"remove",:id=>keyword %></p>
+        <% end %>
+    </td>
+    <td valign="top">
+      <p class="keyword-header">Suggested Keywords</p>
+      <% for keyword in @all_keywords %>
+          <p><%= keyword.word %> <%= link_to "Add" ,:action=>"attach",:id=>keyword %></p>
+      <% end %>
+
+    </td>
+    <td valign="top">
+      <p class="keyword-header">Type one in</p>
+      <%= render :partial => 'form' %>
+
+    </td>
+  </tr>
+</table>

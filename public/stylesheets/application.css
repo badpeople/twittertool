@@ -1,36 +1,3 @@
-body {
-  background-color: #4B7399;
-  font-family: Verdana, Helvetica, Arial;
-  font-size: 14px;
-}
-
-a img {
-  border: none;
-}
-
-a {
-  color: #0000FF;
-}
-
-.clear {
-  clear: both;
-  height: 0;
-  overflow: hidden;
-}
-
-#container {
-  width: 75%;
-  margin: 0 auto;
-  background-color: #FFF;
-  padding: 20px 40px;
-  border: solid 1px black;
-  margin-top: 20px;
-}
-
-#flash_notice, #flash_error {
-  padding: 5px 8px;
-  margin: 10px 0;
-}
 
 #flash_notice {
   background-color: #CFC;
@@ -79,21 +46,227 @@ a {
   font-size: 12px;
   list-style: disc;
 }
+/* reset.css */
+/* 1    Global reset (based upon 'reset.css' in the Yahoo! User Interface Library: http://developer.yahoo.com/yui) */
+*, html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, label, fieldset, input, p, blockquote, th, td { margin:0; padding:0 }
+table { border-collapse:collapse; border-spacing:0 }
+fieldset, img { border:0 }
+address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal }
+ol, ul, li { list-style:none }
+caption, th { text-align:left }
+h1, h2, h3, h4, h5, h6 { font-size:100%; font-weight:normal }
+q:before, q:after { content:''}
+a { text-decoration:none }
 
-.keyword-header
-{
+/* 2    Global reset-RESET (restores some sensible defaults) */
+strong { font-weight:bold }
+em { font-style:italic }
+a img { border:none } /* Gets rid of IE's blue borders */
+a:active { outline:none }
+
+/* 3    Handles */
+div, ul, li, form { position:relative }
+.fix:after { content:" "; visibility:hidden; display:block; height:0; clear:both }
+* html .fix { height:1% }
+.hide { display:none } /* Handy for development */
+
+br.clearfix { clear:both; display:block; height:1px; margin:-1px 0 0 0 }
+
+
+/* layout.css */
+
+
+/*Global*/
+body                            {background: #fff url(../images/bg_gradient.png) repeat-x 0 -1px;}
+#container                      {width: 840px; margin: 25px auto; overflow: hidden;}
+#top                            {background: url(../images/wrapper_top.png) no-repeat scroll bottom; float: left;width: 840px; height: 27px; }
+div#footer                      {background: url(../images/wrapper_bottom.png) no-repeat scroll bottom; float: left;width: 840px; height: 46px;}
+div#content-wrap                {background: transparent url(../images/wrapper_strip.png) repeat-y; float: left; }
+div.content                     {width: 780px; float: left;padding:30px 45px 10px;}
+div#logo                        {float: left; }
+div#slogan                      {position: absolute; top: 54px; left: 230px;}
+div#banner                      {padding:22px 20px 0 0;background: #0d223a url(../images/banner_bolt.png) scroll 166px 0 no-repeat; float: left; width: 780px; margin-left: 21px; padding-bottom: 10px;}
+div#banner ul                   {float: left;}
+div#banner ul li                {padding:2px 0 7px 20px;background: url(../images/banner_list.png) scroll -1px 5px no-repeat;}
+div.content-right               {width: 536px; float: left; padding: 25px 0 0 35px;}
+div.flash-ad                    {width: 490px; height: 130px;}
+
+div.content-left                {width: 200px;}
+div.content div.left            {width: 245px; padding-top: 20px;}
+div.content div.last            {padding-left: 25px;}
+div.content div.last ul li      {background:url("../images/blue_bullet.png") no-repeat scroll 0px 5px transparent;list-style-type: none; padding-left: 15px;}
+
+/*Main Nav*/
+div.main-nav                    {margin: -30px 13px 0 0;}
+div.main-nav ul li              {margin-left: 0; padding-left: 5px;}
+div.main-nav ul li.divider      {vertical-align: top;}
+
+/*Home*/
+body#home div.flash-ad              {background: url('../images/snapp_apps.png') no-repeat scroll 0px 1px;}
+body#home div.content-left          {padding-top: 168px;}
+body#home div.content div.last p    {margin-bottom: 0;}
+
+/*About*/
+body#about div.content div.last             {padding-left: 0;}
+body#about div.team-wrap                    {background: #B5D451 url('../images/Green_Lines_BG.png') no-repeat; color: #fff; margin-bottom: 30px; width: 526px; padding-bottom: 10px;}
+body#about div.team-wrap > div              {padding: 0 10px;}
+body#about div.team-wrap h4                 {background: url('../images/h4bg.png') repeat; color: #375FA9; padding: 8px 0 0 10px; margin-bottom: 10px; }
+body#about div.team-wrap div > a            {background: url("../images/arrow-right.png") no-repeat scroll 0 2px;color: #fff; font-weight: bold; padding-left: 16px;}
+body#about div.team-wrap div p a            {color: #fff;}
+body#about div.team-wrap div p              {color: #0D223A; margin-bottom: 0; padding: 5px 5px 0px 16px;}
+body#about div.team-wrap div.section div    {padding-bottom: 5px;}
+body#about div.team-wrap div p img          {float: left; padding: 0 15px 0 0;}
+body#about div.team-wrap div.spacer         {height: 8px;}
+body#about div.team-wrap div.footer         {background: url('../images/team-footer.png') no-repeat; bottom: -1px; height: 6px; left: 0; position: absolute; width: 526px; }
+body#about div.team-wrap div.arrow-right,
+body#about div.team-wrap div.arrow-down     {float: left; height: 17px; width: 14px;}
+body#about a.visible                        {background: url('../images/arrow-down.png') no-repeat 0 7px !important; display: block;}
+body#about div.team-wrap div.arrow-right    {background: url('../images/arrow-right.png') no-repeat 0 5px; display: block; }
+body#about div.signature                    {float: right; margin: 0px 10px 20px 0;}
+
+/*Distributors*/
+body#distributors div.flash-ad      {width: 100%; height: 151px;}
+body#distributors div.content-left  {padding-top: 142px;}
+
+/*Providers Page*/
+body#providers div.content-left     {padding-top: 168px;}
+body#providers div.flash-ad         {width: 100%; height: 151px;}
+
+/*How It Works Page*/
+body#how div.content-left                       {padding-top: 53px;}
+body#how div.content-left p a.download          {background: url("../images/download-btn.png") no-repeat scroll right; display: block; text-indent: -9999px; text-align: left;}
+body#how p.left                                 {float: left; padding-right:25px; width:245px;}
+
+/*How It Works Image Sprites*/
+ul#img-section                      {margin: 0; padding: 0;}
+ul#img-section li                   {display: inline; list-style-type: none; }
+ul#img-section li a                 {background-image: url('../images/howitworks.png'); display: block; float: left; height: 0; padding-top: 265px; overflow: hidden; outline: none; text-decoration: none; text-indent: -9999px; width: 147px;}
+ul#img-section li#one a             {background-position: 0 0px;}
+ul#img-section li#two a             {background-position: -147px 0; width: 232px;}
+ul#img-section li#three a           {background-position: -379px 0;}
+ul#img-section li#one a:hover,
+ul#img-section li#one a.selected    {background-position: 0 -266px;}
+ul#img-section li#two a:hover,
+ul#img-section li#two a.selected    {background-position: -147px -266px; width: 232px;}
+ul#img-section li#three a:hover,
+ul#img-section li#three a.selected  {background-position: -379px -266px;}
+div#tabs,
+div#tabs div                        {float: left;}
+
+/*Contact Page*/
+body#contact div.content div.left                   {padding-top: 0;}
+body#contact div.content-right div.corporate        {background: #B5D451 url('../images/contact-green-bg.png') no-repeat; height: 170px; padding: 0; width: 237px;}
+body#contact div.content-right div.corporate ul li  {padding-bottom: 3px;}
+body#contact div.content-right div.corporate div    {padding: 0 10px 10px;}
+body#contact div.content-right div.corporate h4     {background: rgba(255,255,255, 0.5); color: #375FA9; text-align: center; margin-bottom: 10px; padding: 8px 0 3px 0;}
+div.left dl dt                                      {background: url('../images/arrow-right.png') no-repeat 0 7px !important; padding: 5px 0 5px 11px;}
+div.left dl dd                                      {padding-left: 11px; padding-bottom: 15px;}
+
+/*Misc*/
+div.right   {float: right;}
+div.left    {float: left;}
+
+/* typography.css */
+
+
+
+
+
+/*Typography*/
+
+
+
+/*@font-face*/
+@font-face      {font-family:"Univers"; src:  url(../fonts/Univers/UniversLTStd-Cn.otf) format("opentype") }
+@font-face      {font-family:'UniversLight'; src: url(../fonts/Univers/UniversLTStd-LightCn.otf) format("opentype"); font-weight: normal; }
+
+
+/*Global*/
+body            {color: #0d223a; font: normal 13px/18px arial, sans-serif;}
+p               {margin-bottom: 12px;}
+a               {outline: none;}
+.bold, .strong  {font-weight: bold;}
+.em             {font-style: italic;}
+
+/*Headers*/
+h1 a                    {background: url(../images/sc_logo.png) scroll left no-repeat; width: 188px; height: 58px; text-indent: -9999px; display: block;}
+div#banner h2           {color: #A1B4D7; text-align: right; font: normal 31px/42px 'UniversLight', "Univers", arial;}
+body#providers div#banner h2,
+body#distributors div#banner h2             {color: #375fa9;}
+div#banner h2 span.bold {font-family: "Univers", arial; font-weight: bold;}
+body#providers div#banner h2.active,
+body#distributors div#banner h2.active  {color: #A1B4D7;}
+h3                      {font-family: "Univers", arial;font-size: 19px;color: #0d223a; margin-bottom: 10px;}
+
+
+/*Main Content*/
+div.content-left                            {font-family: 'UniversLight', "Univers", "Arial Narrow", arial; font-size: 25px; color: #a1b4d7; text-align: right; float: left; line-height: 52px;}
+div.content div.left                        {font-size: 11px; line-height: 17px; color: #071321;}
+div.content-right                           {font-size: 13px; line-height: 25px; color: #829DCD;}
+body#about div.content-right                {line-height: 21px;}
+body#how div#tabs                           {line-height: 18px;}
+body#how div.content-right                  {color: #0d223a;}
+body#how div.content-right div#tabs img     {float: left; padding-right: 10px;}
+body#how div.content-right p                {margin-top: 15px;}
+body#how div.content-right p.left           {color: #829DCD; line-height: 20px;}
+body#how div.content-right p.right,
+body#about p.small                          {font-size: 12px; line-height: 18px;}
+body#about p.small                          {color: #0d223a;}
+body#about div.signature ul li              {color: #829DCD; font-size: 11px; line-height: 17px; text-align: right;}
+body#about div.team-wrap div p              {font-size: 12px;}
+body#how div.content-left span.trademark    {font-size: 17px; line-height: 48px; vertical-align: top;}
+div.content span.blue                       {color: #3f6bbb;}
+body#how div.content h3 span.blue           {font-size: 13px;}
+
+body#contact div.left                           {font-size: 13px;}
+body#contact div.content-right div.corporate    {color: #fff; text-align: center;}
+body#contact div.left dl                        {font-size: 13px;}
+body#contact div.left dl dt                     {color: #ACC3E0; font-size: 15px;}
+body#contact div.left dl dd a                   {color: #0d223a;}
+
+
+/*Footer*/
+div#footer              {text-align: center; color: #fff; }
+div#footer ul           {padding-top: 10px;}
+div#footer ul li        {display: inline; font-size: 11px;}
+div#footer ul li a      {color: #375fa9;}
+
+
+/*Main Nav*/
+div.main-nav ul             {text-align: right;}
+div.main-nav ul li          {text-decoration: none; text-transform: uppercase; color: #375fa9; font-size: 12px;}
+div.main-nav ul li a        {color: #375fa9; vertical-align: text-top;}
+div.main-nav ul li a#active,
+div.main-nav ul li a:hover,
+div.main-nav ul li a:active {color: #ACC3E0}
+
+
+div#slogan                      {color: #acc3e0; font-size: 14px;}
+div#banner ul li a              {color: #fff; font-size: 13px; text-transform: uppercase; }
+div#banner ul li a:active,
+div#banner ul li a:hover,
+div#banner ul li a#active       {color: #acc3e0;}
+
+/* enrichment.css*/
+
+div#banner h2,
+div#banner ul li a  {text-shadow: 1px 1px 1px #010E34}
+
+span.main-title{
+    font-size: 4.0em;
+    vertical-align:top;
+    padding: 10px 80px;
+    color: #375fa9;
     font-weight:bold;
-    padding-right:36px;
+    font-family: "UniversLight, Univers, arial";
 }
 
-#header > span
+.main-nav-container
 {
-    padding-left: 10px;
-    padding-right: 10px;
-
+    vertical-align: top;
 }
 
-#header
+.title-img
 {
-    padding-bottom: 20px;
+    height:120px;
 }

@@ -1,25 +1,94 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <title><%= h(yield(:title) || "Untitled") %> | The Twittertool</title>
-    <%= stylesheet_link_tag 'application' %>
-    <%= yield(:head) %>
-  </head>
-  <body>
-    <div id="container">
-      <%- flash.each do |name, msg| -%>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
-      <%- end -%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<!-- Meta Tags -->
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<meta http-equiv="content-Language" content="en-us" />
+		<meta http-equiv="imagetoolbar" content="false" />
+		<meta name="revisit-after" content="3 days" />
+		<meta name="robots" content="all" />
+        <%= stylesheet_link_tag 'application' %>
 
-      <% if logged_in? then %>
-          <div id="header">
-            <span><%= link_to "Home",:controller => 'users',:action => :home %></span><span><%= link_to "My Keywords",:controller => 'keywords'%></span><span><%= link_to "My Stats",:controller=>'users',:action=>"stats" %></span><span><%= link_to "Logout",:controller=>'sessions',:action=>"destroy" %></span>
-          </div>
-      <% end %>
-      
+		<!-- Javascript -->
+		<!--<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2'></script>-->
+		<!--<script src="assets/js/main.js" type="text/javascript" charset="utf-8"></script>-->
+		<!--<script src="assets/js/jquery.pngFix.js" type="text/javascript" charset="utf-8"></script>-->
+		<!--[if IE]>
+		<!--<script src="assets/js/ie.js" type="text/javascript" charset="utf-8"></script>-->
+		<![endif]-->
 
-      <%= yield %>
-    </div>
-  </body>
+		<!-- Title -->
+		<title>FollowATHON | Home</title>
+
+	</head>
+	<body id="home">
+		<div id="container">
+			<div id="top">
+			</div> <!-- END #header-wrap -->
+			<div id="content-wrap">
+				<div class="content">
+
+                    <table width="100%">
+                      <tr>
+                        <td>
+                          <div id="logo">
+                            <%= image_tag "twitter_logo.png",:class => "title-img" %>
+                            <span class="main-title">FollowATHON</span>
+                          </div>
+                        </td>
+                        <td class="main-nav-container">
+                          <div class="main-nav">
+						<ul>
+
+							<% if logged_in? then %>
+                              <li><%= link_to "Logout",:controller=>"sessions",:action=>"destroy" %></li>
+                              <li><%= link_to "My Keywords",:controller=>"keywords" %></li>
+                              <li><%= link_to "My Stats",:controller=>"users",:action => "stats" %></li>
+                             <% else %>
+                              <li><%= link_to "Login / Signup","/login" %></li>
+
+							<% end %>
+                          <li><%= link_to "Contact Us",:controller=>"static",:action=>"contact" %></li>
+
+
+						</ul>
+					</div>
+
+                        </td>
+                      </tr>
+                    </table>
+					 <!-- END .main-nav -->
+					 <!-- END #logo -->
+				</div> <!-- END .content -->
+				<div id="banner">
+					<ul>
+						<li><%= link_to "HOW IT WORKS",:controller => "static",:action => "howitworks" %></li>
+						<li><%= link_to "OUR PROMISE",:controller => "static",:action => "ourpromise" %></li>
+						<li><%= link_to "HOW IT WORKS",:controller => "static",:action => "howitworks" %></li>
+					</ul>
+					<div class="right">
+						<h2>Your apps <span class="bold">sold.</span></h2>
+						<h2>Your app store <span class="bold">delivered.</span></h2>
+					</div> <!-- END .right -->
+				</div> <!-- END #banner -->
+				<div class="content">
+					  <%= yield %>
+
+				</div> <!-- END .content -->
+			</div> <!-- END #content-wrap -->
+			<div id="footer">
+				<ul>
+					<li>&copy;2010 FollowATHON</li>
+				</ul>
+			</div><!-- END #footer -->
+		</div> <!-- END #container -->
+
+	</body>
 </html>
+
+
+
+
+
+

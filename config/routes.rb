@@ -8,6 +8,8 @@ ActionController::Routing::Routes.draw do |map|
   map.tweets 'users/tweets', :controller=>'users',:action => 'tweets'
   map.folow_test 'users/follow_test', :controller=>'users',:action => 'follow_test'
 
+  map.contact 'contact', :controller => 'static',:action => 'contact'
+
   map.resources :sessions
 
   map.resources :users,:collection=> {:home=>:get,:stats=>:get}

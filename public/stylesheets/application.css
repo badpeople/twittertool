@@ -85,3 +85,15 @@ a {
     font-weight:bold;
     padding-right:36px;
 }
+
+#header > span
+{
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+#header
+{
+    padding-bottom: 20px;
+}

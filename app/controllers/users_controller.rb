@@ -24,6 +24,13 @@ class UsersController < ApplicationController
 
   end
 
+  def stats
+
+    @recent_friendings = Friending.find_all_by_user_id(current_user.id,:order=>"created_at")
+
+
+  end
+
 
 
 

@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title><%= h(yield(:title) || "Untitled") %></title>
+    <title><%= h(yield(:title) || "Untitled") %> | The Twittertool</title>
     <%= stylesheet_link_tag 'application' %>
     <%= yield(:head) %>
   </head>
@@ -11,11 +11,14 @@
       <%- flash.each do |name, msg| -%>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <%- end -%>
+
+      <% if logged_in? then %>
+          <div id="header">
+            <span><%= link_to "Home",:controller => 'users',:action => :home %></span><span><%= link_to "My Keywords",:controller => 'keywords'%></span><span><%= link_to "My Stats",:controller=>'users',:action=>"stats" %></span><span><%= link_to "Logout",:controller=>'sessions',:action=>"destroy" %></span>
+          </div>
+      <% end %>
       
-      <%- if show_title? -%>
-        <h1><%=h yield(:title) %></h1>
-      <%- end -%>
-      
+
       <%= yield %>
     </div>
   </body>

@@ -10,7 +10,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :sessions
 
-  map.resources :users,:collection=> {:home=>:get}
+  map.resources :users,:collection=> {:home=>:get,:stats=>:get}
 
 
   # The priority is based upon order of creation: first created -> highest priority.

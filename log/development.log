@@ -4627,3 +4627,1084 @@ Rendering template within layouts/application
 Rendering users/index
 Completed in 52ms (View: 18, DB: 71) | 200 OK [http://127.0.0.1/]
 ** TwitterAuth initialized properly.
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 98.216.157.206 at 2010-10-09 12:43:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+
+MissingSourceFile (no such file to load -- rand):
+  lib/main.rb:1
+  app/controllers/users_controller.rb:3
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /home/paul/.gem/ruby/1.8/gems/ruby-debug-ide-0.4.9/lib/ruby-debug-ide.rb:109:in `debug_load'
+  /home/paul/.gem/ruby/1.8/gems/ruby-debug-ide-0.4.9/lib/ruby-debug-ide.rb:109:in `debug_program'
+  /home/paul/.gem/ruby/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:87
+  /home/paul/.gem/ruby/1.8/bin/rdebug-ide:19:in `load'
+  /home/paul/.gem/ruby/1.8/bin/rdebug-ide:19
+  -e:1:in `load'
+  -e:1
+
+Rendered rescues/_trace (479.9ms)
+Rendered rescues/_request_and_response (3.2ms)
+Rendering rescues/layout (internal_server_error)
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 98.216.157.206 at 2010-10-09 12:43:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/index
+Completed in 90ms (View: 26, DB: 1) | 200 OK [http://98.216.157.206/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 98.216.157.206 at 2010-10-09 12:43:46) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Redirected to https://twitter.com/oauth/authenticate?oauth_token=278TEtpfw28reExJT2DJs89FIhn3Fc1Ni8OSFLx72M&oauth_callback=http%3A%2F%2F98.216.157.206%2Foauth_callback
+Completed in 678ms (DB: 0) | 302 Found [http://98.216.157.206/login]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#oauth_callback (for 98.216.157.206 at 2010-10-09 12:43:48) [GET]
+  Parameters: {"action"=>"oauth_callback", "controller"=>"sessions", "oauth_token"=>"278TEtpfw28reExJT2DJs89FIhn3Fc1Ni8OSFLx72M", "oauth_verifier"=>"CowvaexmwWT6bN7Q8czFeD6bO1zmSd7qKsfo58c"}
+  [4;36;1mUser Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (26.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`twitter_id` = '192785447') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterAuth::GenericUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mTwitterAuth::GenericUser Load (158.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'paultweettest' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mTwitterAuth::GenericUser Load (0.7ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`twitter_id` = BINARY '192785447' AND `users`.id <> 1) LIMIT 1[0m
+  [4;36;1mTwitterAuth::GenericUser Load (0.8ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`remember_token` = BINARY 'eeeca4d5d79a2130d0aa' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Update (93.3ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-10-09 16:43:50', `profile_image_url` = 'http://s.twimg.com/a/1286563368/images/default_profile_1_normal.png', `profile_background_image_url` = 'http://s.twimg.com/a/1286563368/images/themes/theme1/bg.png', `friends_count` = 103 WHERE `id` = 1[0m
+  [4;36;1mSQL (78.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterAuth::GenericUser Load (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'paultweettest' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mTwitterAuth::GenericUser Load (0.5ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`twitter_id` = BINARY '192785447' AND `users`.id <> 1) LIMIT 1[0m
+  [4;36;1mTwitterAuth::GenericUser Load (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`remember_token` = BINARY '8cc01d522591e5687b03' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-10-09 16:43:50', `remember_token_expires_at` = '2038-02-24 17:43:50', `remember_token` = '8cc01d522591e5687b03' WHERE `id` = 1[0m
+  [4;36;1mSQL (41.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://98.216.157.206:3000/
+Completed in 2273ms (DB: 407) | 302 Found [http://98.216.157.206/oauth_callback?oauth_token=278TEtpfw28reExJT2DJs89FIhn3Fc1Ni8OSFLx72M&oauth_verifier=CowvaexmwWT6bN7Q8czFeD6bO1zmSd7qKsfo58c]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 98.216.157.206 at 2010-10-09 12:43:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (27.9ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Redirected to http://98.216.157.206:3000/users/home
+Completed in 60ms (DB: 30) | 302 Found [http://98.216.157.206/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#home (for 98.216.157.206 at 2010-10-09 12:43:50) [GET]
+  Parameters: {"action"=>"home", "controller"=>"users"}
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mFriending Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `friendings`[0m
+  [4;36;1mFriending Load (39.1ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 1) ORDER BY created_at LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/home
+Completed in 121ms (View: 35, DB: 42) | 200 OK [http://98.216.157.206/users/home]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#home (for 98.216.157.206 at 2010-10-09 12:45:39) [GET]
+  Parameters: {"action"=>"home", "controller"=>"users"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mFriending Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `friendings`[0m
+  [4;36;1mFriending Load (0.3ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 1) ORDER BY created_at LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/home
+
+ActionView::TemplateError (undefined method `each' for #<Friending:0xb5fc3a54>) on line #8 of app/views/users/home.html.erb:
+5: 
+6: <p> We recently friended the following </p>
+7: 
+8: <% for recent_follow in @recent_friendings %>
+9:     <%= link_to recent_follow, "http://twitter.com/#{recent_follow}" %>
+10: 
+11: <% end %>
+
+    app/views/users/home.html.erb:8
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /home/paul/.gem/ruby/1.8/gems/ruby-debug-ide-0.4.9/lib/ruby-debug-ide.rb:109:in `debug_load'
+    /home/paul/.gem/ruby/1.8/gems/ruby-debug-ide-0.4.9/lib/ruby-debug-ide.rb:109:in `debug_program'
+    /home/paul/.gem/ruby/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:87
+    /home/paul/.gem/ruby/1.8/bin/rdebug-ide:19:in `load'
+    /home/paul/.gem/ruby/1.8/bin/rdebug-ide:19
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (193.8ms)
+Rendered rescues/_request_and_response (3.1ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#home (for 98.216.157.206 at 2010-10-09 12:46:05) [GET]
+  Parameters: {"action"=>"home", "controller"=>"users"}
+  [4;35;1mUser Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mFriending Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `friendings`[0m
+  [4;36;1mFriending Load (2.4ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 1) ORDER BY created_at LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/home
+
+ActionView::TemplateError (undefined method `each' for #<Friending:0xb670d508>) on line #8 of app/views/users/home.html.erb:
+5: 
+6: <p> We recently friended the following </p>
+7: 
+8: <% @recent_friendings.each do |recent_follow| %>
+9:     <%= link_to recent_follow, "http://twitter.com/#{recent_follow}" %>
+10: 
+11: <% end %>
+
+    app/views/users/home.html.erb:8
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /home/paul/.gem/ruby/1.8/gems/ruby-debug-ide-0.4.9/lib/ruby-debug-ide.rb:109:in `debug_load'
+    /home/paul/.gem/ruby/1.8/gems/ruby-debug-ide-0.4.9/lib/ruby-debug-ide.rb:109:in `debug_program'
+    /home/paul/.gem/ruby/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:87
+    /home/paul/.gem/ruby/1.8/bin/rdebug-ide:19:in `load'
+    /home/paul/.gem/ruby/1.8/bin/rdebug-ide:19
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (227.2ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#home (for 98.216.157.206 at 2010-10-09 12:46:20) [GET]
+  Parameters: {"action"=>"home", "controller"=>"users"}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mFriending Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `friendings`[0m
+  [4;36;1mFriending Load (12.2ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 1) ORDER BY created_at[0m
+Rendering template within layouts/application
+Rendering users/home
+Completed in 108ms (View: 26, DB: 16) | 200 OK [http://98.216.157.206/users/home]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#home (for 98.216.157.206 at 2010-10-09 12:46:46) [GET]
+  Parameters: {"action"=>"home", "controller"=>"users"}
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mFriending Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `friendings`[0m
+  [4;36;1mFriending Load (0.2ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 1) ORDER BY created_at[0m
+Rendering template within layouts/application
+Rendering users/home
+Completed in 64ms (View: 25, DB: 4) | 200 OK [http://98.216.157.206/users/home]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#home (for 98.216.157.206 at 2010-10-09 12:46:59) [GET]
+  Parameters: {"action"=>"home", "controller"=>"users"}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mFriending Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `friendings`[0m
+  [4;36;1mFriending Load (0.2ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 1) ORDER BY created_at[0m
+Rendering template within layouts/application
+Rendering users/home
+Completed in 114ms (View: 66, DB: 3) | 200 OK [http://98.216.157.206/users/home]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#home (for 98.216.157.206 at 2010-10-09 12:47:00) [GET]
+  Parameters: {"action"=>"home", "controller"=>"users"}
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mFriending Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `friendings`[0m
+  [4;36;1mFriending Load (0.2ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 1) ORDER BY created_at[0m
+Rendering template within layouts/application
+Rendering users/home
+Completed in 86ms (View: 44, DB: 4) | 200 OK [http://98.216.157.206/users/home]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#home (for 98.216.157.206 at 2010-10-09 12:47:06) [GET]
+  Parameters: {"action"=>"home", "controller"=>"users"}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mFriending Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `friendings`[0m
+  [4;36;1mFriending Load (0.2ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 1) ORDER BY created_at[0m
+Rendering template within layouts/application
+Rendering users/home
+Completed in 84ms (View: 32, DB: 4) | 200 OK [http://98.216.157.206/users/home]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#home (for 98.216.157.206 at 2010-10-09 12:49:59) [GET]
+  Parameters: {"action"=>"home", "controller"=>"users"}
+  [4;35;1mUser Columns (3.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mFriending Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `friendings`[0m
+  [4;36;1mFriending Load (0.5ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 1) ORDER BY created_at[0m
+Rendering template within layouts/application
+Rendering users/home
+Completed in 86ms (View: 20, DB: 5) | 200 OK [http://98.216.157.206/users/home]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 98.216.157.206 at 2010-10-09 12:53:29) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+Redirected to http://98.216.157.206:3000/
+Completed in 8ms (DB: 0) | 302 Found [http://98.216.157.206/logout]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 98.216.157.206 at 2010-10-09 12:53:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/index
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://98.216.157.206/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 98.216.157.206 at 2010-10-09 12:55:15) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/index
+Completed in 23ms (View: 12, DB: 0) | 200 OK [http://98.216.157.206/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 98.216.157.206 at 2010-10-09 12:55:19) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Redirected to https://twitter.com/oauth/authenticate?oauth_token=W1YK9asLd74eDyGuEsPSSqDgxg4W9Ffwk27z4ULorHE&oauth_callback=http%3A%2F%2F98.216.157.206%2Foauth_callback
+Completed in 679ms (DB: 1) | 302 Found [http://98.216.157.206/login]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#oauth_callback (for 98.216.157.206 at 2010-10-09 12:55:21) [GET]
+  Parameters: {"action"=>"oauth_callback", "controller"=>"sessions", "oauth_token"=>"W1YK9asLd74eDyGuEsPSSqDgxg4W9Ffwk27z4ULorHE", "oauth_verifier"=>"2dLNtYSX3WV5JqQ4zX40MvWe45MbQCD1rg0QTCqk"}
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`twitter_id` = '192785447') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mTwitterAuth::GenericUser Load (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'paultweettest') LIMIT 1[0m
+  [4;35;1mTwitterAuth::GenericUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`twitter_id` = BINARY '192785447') LIMIT 1[0m
+  [4;36;1mUser Create (0.5ms)[0m   [0;1mINSERT INTO `users` (`name`, `profile_sidebar_fill_color`, `profile_sidebar_border_color`, `profile_background_tiled`, `location`, `profile_image_url`, `created_at`, `access_secret`, `remember_token_expires_at`, `profile_link_color`, `updated_at`, `url`, `favourites_count`, `utc_offset`, `twitter_id`, `remember_token`, `protected`, `profile_text_color`, `followers_count`, `description`, `profile_background_color`, `time_zone`, `login`, `profile_background_image_url`, `friends_count`, `statuses_count`, `access_token`) VALUES('Paul Test', 'DDEEF6', 'C0DEED', NULL, NULL, 'http://s.twimg.com/a/1286563368/images/default_profile_1_normal.png', '2010-10-09 16:56:38', 'FI3RLu6npSikoD9u5uAvgweGQ3v5P8QOWA5alNLMO0', NULL, '0084B4', '2010-10-09 16:56:38', NULL, 0, NULL, '192785447', NULL, 0, '333333', 2, NULL, 'C0DEED', NULL, 'paultweettest', 'http://s.twimg.com/a/1286563368/images/themes/theme1/bg.png', 107, 0, '192785447-G8hVa6DrV3gDB1JSg93bZEH9BdXkdyadjZGkH5nr')[0m
+  [4;35;1mSQL (61.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterAuth::GenericUser Load (0.6ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'paultweettest' AND `users`.id <> 1) LIMIT 1[0m
+  [4;36;1mTwitterAuth::GenericUser Load (0.6ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`twitter_id` = BINARY '192785447' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mTwitterAuth::GenericUser Load (0.5ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`remember_token` = BINARY '5bab6fa90dad2ece78b1' AND `users`.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-10-09 16:56:38', `remember_token_expires_at` = '2038-02-24 17:56:38', `remember_token` = '5bab6fa90dad2ece78b1' WHERE `id` = 1[0m
+  [4;35;1mSQL (49.3ms)[0m   [0mCOMMIT[0m
+Redirected to http://98.216.157.206:3000/
+Completed in 77630ms (DB: 119) | 302 Found [http://98.216.157.206/oauth_callback?oauth_token=W1YK9asLd74eDyGuEsPSSqDgxg4W9Ffwk27z4ULorHE&oauth_verifier=2dLNtYSX3WV5JqQ4zX40MvWe45MbQCD1rg0QTCqk]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 98.216.157.206 at 2010-10-09 12:56:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/index
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://98.216.157.206/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 98.216.157.206 at 2010-10-09 12:56:41) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Redirected to https://twitter.com/oauth/authenticate?oauth_token=7EaWe2lGBuI77xbChYDjgG46XVVNJcuHs0GS8xqDn4&oauth_callback=http%3A%2F%2F98.216.157.206%2Foauth_callback
+Completed in 673ms (DB: 0) | 302 Found [http://98.216.157.206/login]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#oauth_callback (for 98.216.157.206 at 2010-10-09 12:56:43) [GET]
+  Parameters: {"action"=>"oauth_callback", "controller"=>"sessions", "oauth_token"=>"7EaWe2lGBuI77xbChYDjgG46XVVNJcuHs0GS8xqDn4", "oauth_verifier"=>"k7pSEvcQhIiThOlgjJjFUQm5mCVrBo3t6jO5AdXpc"}
+  [4;36;1mUser Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`twitter_id` = '192785447') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterAuth::GenericUser Load (0.6ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'paultweettest' AND `users`.id <> 1) LIMIT 1[0m
+  [4;36;1mTwitterAuth::GenericUser Load (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`twitter_id` = BINARY '192785447' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mTwitterAuth::GenericUser Load (0.5ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`remember_token` = BINARY '5bab6fa90dad2ece78b1' AND `users`.id <> 1) LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'paultweettest' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`twitter_id` = BINARY '192785447' AND `users`.id <> 1) LIMIT 1[0m
+  [4;36;1mTwitterAuth::GenericUser Load (0.6ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`remember_token` = BINARY 'a489743b84fdbb0e5bd9' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-10-09 16:56:44', `remember_token_expires_at` = '2038-02-24 17:56:44', `remember_token` = 'a489743b84fdbb0e5bd9' WHERE `id` = 1[0m
+  [4;36;1mSQL (46.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://98.216.157.206:3000/
+Completed in 1584ms (DB: 54) | 302 Found [http://98.216.157.206/oauth_callback?oauth_token=7EaWe2lGBuI77xbChYDjgG46XVVNJcuHs0GS8xqDn4&oauth_verifier=k7pSEvcQhIiThOlgjJjFUQm5mCVrBo3t6jO5AdXpc]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 98.216.157.206 at 2010-10-09 12:56:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Redirected to http://98.216.157.206:3000/users/home
+Completed in 25ms (DB: 3) | 302 Found [http://98.216.157.206/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#home (for 98.216.157.206 at 2010-10-09 12:56:45) [GET]
+  Parameters: {"action"=>"home", "controller"=>"users"}
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mFriending Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `friendings`[0m
+  [4;36;1mFriending Load (0.3ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 1) ORDER BY created_at[0m
+Rendering template within layouts/application
+Rendering users/home
+Completed in 75ms (View: 30, DB: 4) | 200 OK [http://98.216.157.206/users/home]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 98.216.157.206 at 2010-10-09 12:56:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"keywords"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mKeyword Load (25.2ms)[0m   [0mSELECT * FROM `keywords` [0m
+  [4;36;1mkeywords_users Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `keywords_users`[0m
+  [4;35;1mKeyword Load (1.1ms)[0m   [0mSELECT * FROM `keywords` INNER JOIN `keywords_users` ON `keywords`.id = `keywords_users`.keyword_id WHERE (`keywords_users`.user_id = 1 ) [0m
+  [4;36;1mKeyword Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `keywords`[0m
+Rendering template within layouts/application
+Rendering keywords/index
+Rendered keywords/_form (5.2ms)
+Completed in 117ms (View: 42, DB: 30) | 200 OK [http://98.216.157.206/keywords]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#attach (for 98.216.157.206 at 2010-10-09 12:56:53) [GET]
+  Parameters: {"action"=>"attach", "id"=>"1", "controller"=>"keywords"}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mKeyword Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `keywords`[0m
+  [4;36;1mKeyword Load (0.4ms)[0m   [0;1mSELECT * FROM `keywords` WHERE (`keywords`.`id` = 1) [0m
+  [4;35;1mKeyword Load (0.4ms)[0m   [0mSELECT `keywords`.id FROM `keywords` INNER JOIN `keywords_users` ON `keywords`.id = `keywords_users`.keyword_id WHERE (`keywords`.`id` = 1) AND (`keywords_users`.user_id = 1 ) LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (18.1ms)[0m   [0mdescribe `keywords_users`[0m
+  [4;36;1mkeywords_users Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `keywords_users`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO `keywords_users` (`user_id`, `keyword_id`) VALUES (1, 1)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://98.216.157.206:3000/keywords
+Completed in 87ms (DB: 23) | 302 Found [http://98.216.157.206/keywords/attach/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 98.216.157.206 at 2010-10-09 12:56:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"keywords"}
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.7ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mKeyword Load (0.2ms)[0m   [0mSELECT * FROM `keywords` [0m
+  [4;36;1mkeywords_users Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `keywords_users`[0m
+  [4;35;1mKeyword Load (46.3ms)[0m   [0mSELECT * FROM `keywords` INNER JOIN `keywords_users` ON `keywords`.id = `keywords_users`.keyword_id WHERE (`keywords_users`.user_id = 1 ) [0m
+  [4;36;1mKeyword Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `keywords`[0m
+Rendering template within layouts/application
+Rendering keywords/index
+Rendered keywords/_form (5.3ms)
+Completed in 119ms (View: 21, DB: 52) | 200 OK [http://98.216.157.206/keywords]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#attach (for 98.216.157.206 at 2010-10-09 12:56:55) [GET]
+  Parameters: {"action"=>"attach", "id"=>"11", "controller"=>"keywords"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mKeyword Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `keywords`[0m
+  [4;36;1mKeyword Load (0.4ms)[0m   [0;1mSELECT * FROM `keywords` WHERE (`keywords`.`id` = 11) [0m
+  [4;35;1mKeyword Load (0.4ms)[0m   [0mSELECT `keywords`.id FROM `keywords` INNER JOIN `keywords_users` ON `keywords`.id = `keywords_users`.keyword_id WHERE (`keywords`.`id` = 11) AND (`keywords_users`.user_id = 1 ) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `keywords_users`[0m
+  [4;36;1mkeywords_users Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `keywords_users`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO `keywords_users` (`user_id`, `keyword_id`) VALUES (1, 11)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://98.216.157.206:3000/keywords
+Completed in 56ms (DB: 6) | 302 Found [http://98.216.157.206/keywords/attach/11]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 98.216.157.206 at 2010-10-09 12:56:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"keywords"}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mKeyword Load (0.2ms)[0m   [0mSELECT * FROM `keywords` [0m
+  [4;36;1mkeywords_users Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `keywords_users`[0m
+  [4;35;1mKeyword Load (0.5ms)[0m   [0mSELECT * FROM `keywords` INNER JOIN `keywords_users` ON `keywords`.id = `keywords_users`.keyword_id WHERE (`keywords_users`.user_id = 1 ) [0m
+  [4;36;1mKeyword Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `keywords`[0m
+Rendering template within layouts/application
+Rendering keywords/index
+Rendered keywords/_form (4.2ms)
+Completed in 60ms (View: 15, DB: 4) | 200 OK [http://98.216.157.206/keywords]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#create (for 98.216.157.206 at 2010-10-09 12:57:02) [POST]
+  Parameters: {"commit"=>"Save changes", "action"=>"create", "authenticity_token"=>"82e/p4Azk3SUobMaYwPQSZXI68nLuuav4VeHpc0dcGc=", "controller"=>"keywords", "keyword"=>{"word"=>"AAPL"}}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mKeyword Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `keywords`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mKeyword Create (0.5ms)[0m   [0mINSERT INTO `keywords` (`created_at`, `word`, `updated_at`) VALUES('2010-10-09 16:57:02', 'AAPL', '2010-10-09 16:57:02')[0m
+  [4;36;1mSQL (85.1ms)[0m   [0;1mdescribe `keywords_users`[0m
+  [4;35;1mkeywords_users Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `keywords_users`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO `keywords_users` (`user_id`, `keyword_id`) VALUES (1, 12)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://98.216.157.206:3000/keywords
+Completed in 272ms (DB: 91) | 302 Found [http://98.216.157.206/keywords]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 98.216.157.206 at 2010-10-09 12:57:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"keywords"}
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mKeyword Load (0.4ms)[0m   [0;1mSELECT * FROM `keywords` [0m
+  [4;35;1mkeywords_users Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `keywords_users`[0m
+  [4;36;1mKeyword Load (0.5ms)[0m   [0;1mSELECT * FROM `keywords` INNER JOIN `keywords_users` ON `keywords`.id = `keywords_users`.keyword_id WHERE (`keywords_users`.user_id = 1 ) [0m
+  [4;35;1mKeyword Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `keywords`[0m
+Rendering template within layouts/application
+Rendering keywords/index
+Rendered keywords/_form (3.8ms)
+Completed in 62ms (View: 16, DB: 4) | 200 OK [http://98.216.157.206/keywords]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 98.216.157.206 at 2010-10-09 12:59:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"keywords"}
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mKeyword Load (0.2ms)[0m   [0;1mSELECT * FROM `keywords` [0m
+  [4;35;1mkeywords_users Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `keywords_users`[0m
+  [4;36;1mKeyword Load (0.2ms)[0m   [0;1mSELECT * FROM `keywords` INNER JOIN `keywords_users` ON `keywords`.id = `keywords_users`.keyword_id WHERE (`keywords_users`.user_id = 1 ) [0m
+  [4;35;1mKeyword Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `keywords`[0m
+Rendering template within layouts/application
+Rendering keywords/index
+Rendered keywords/_form (4.0ms)
+Completed in 90ms (View: 28, DB: 5) | 200 OK [http://98.216.157.206/keywords]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 98.216.157.206 at 2010-10-09 13:00:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"keywords"}
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mKeyword Load (0.2ms)[0m   [0;1mSELECT * FROM `keywords` [0m
+  [4;35;1mkeywords_users Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `keywords_users`[0m
+  [4;36;1mKeyword Load (0.4ms)[0m   [0;1mSELECT * FROM `keywords` INNER JOIN `keywords_users` ON `keywords`.id = `keywords_users`.keyword_id WHERE (`keywords_users`.user_id = 1 ) [0m
+  [4;35;1mKeyword Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `keywords`[0m
+Rendering template within layouts/application
+Rendering keywords/index
+Rendered keywords/_form (6.7ms)
+Completed in 82ms (View: 30, DB: 6) | 200 OK [http://98.216.157.206/keywords]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 98.216.157.206 at 2010-10-09 13:01:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"keywords"}
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mKeyword Load (0.2ms)[0m   [0;1mSELECT * FROM `keywords` [0m
+  [4;35;1mkeywords_users Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `keywords_users`[0m
+  [4;36;1mKeyword Load (0.2ms)[0m   [0;1mSELECT * FROM `keywords` INNER JOIN `keywords_users` ON `keywords`.id = `keywords_users`.keyword_id WHERE (`keywords_users`.user_id = 1 ) [0m
+  [4;35;1mKeyword Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `keywords`[0m
+Rendering template within layouts/application
+Rendering keywords/index
+Rendered keywords/_form (4.7ms)
+Completed in 103ms (View: 34, DB: 4) | 200 OK [http://98.216.157.206/keywords]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 98.216.157.206 at 2010-10-09 13:01:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"keywords"}
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mKeyword Load (0.2ms)[0m   [0;1mSELECT * FROM `keywords` [0m
+  [4;35;1mkeywords_users Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `keywords_users`[0m
+  [4;36;1mKeyword Load (0.2ms)[0m   [0;1mSELECT * FROM `keywords` INNER JOIN `keywords_users` ON `keywords`.id = `keywords_users`.keyword_id WHERE (`keywords_users`.user_id = 1 ) [0m
+  [4;35;1mKeyword Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `keywords`[0m
+Rendering template within layouts/application
+Rendering keywords/index
+Rendered keywords/_form (4.1ms)
+Completed in 64ms (View: 18, DB: 5) | 200 OK [http://98.216.157.206/keywords]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#home (for 98.216.157.206 at 2010-10-09 13:01:39) [GET]
+  Parameters: {"action"=>"home", "controller"=>"users"}
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mFriending Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (0.2ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 1) ORDER BY created_at[0m
+Rendering template within layouts/application
+Rendering users/home
+Completed in 53ms (View: 13, DB: 4) | 200 OK [http://98.216.157.206/users/home]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 98.216.157.206 at 2010-10-09 13:01:41) [GET]
+  Parameters: {"action"=>"show", "id"=>"stats", "controller"=>"users"}
+
+ActionController::UnknownAction (No action responded to show. Actions: already_attempted_friending?, current_user, do_follows_for_user, fetch, follow_from_list, follow_test, get_users_to_follow, home, index, logged_in, logged_in?, login_required, redirect_to_target_or_default, search_updates, shuffle_array, tweets, and users_from_keyword_search):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /home/paul/.gem/ruby/1.8/gems/ruby-debug-ide-0.4.9/lib/ruby-debug-ide.rb:109:in `debug_load'
+  /home/paul/.gem/ruby/1.8/gems/ruby-debug-ide-0.4.9/lib/ruby-debug-ide.rb:109:in `debug_program'
+  /home/paul/.gem/ruby/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:87
+  /home/paul/.gem/ruby/1.8/bin/rdebug-ide:19:in `load'
+  /home/paul/.gem/ruby/1.8/bin/rdebug-ide:19
+  -e:1:in `load'
+  -e:1
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#home (for 98.216.157.206 at 2010-10-09 13:02:36) [GET]
+  Parameters: {"action"=>"home", "controller"=>"users"}
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mFriending Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (0.2ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 1) ORDER BY created_at[0m
+Rendering template within layouts/application
+Rendering users/home
+Completed in 81ms (View: 33, DB: 4) | 200 OK [http://98.216.157.206/users/home]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 98.216.157.206 at 2010-10-09 13:02:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"keywords"}
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mKeyword Load (0.2ms)[0m   [0;1mSELECT * FROM `keywords` [0m
+  [4;35;1mkeywords_users Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `keywords_users`[0m
+  [4;36;1mKeyword Load (0.2ms)[0m   [0;1mSELECT * FROM `keywords` INNER JOIN `keywords_users` ON `keywords`.id = `keywords_users`.keyword_id WHERE (`keywords_users`.user_id = 1 ) [0m
+  [4;35;1mKeyword Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `keywords`[0m
+Rendering template within layouts/application
+Rendering keywords/index
+Rendered keywords/_form (4.9ms)
+Completed in 61ms (View: 18, DB: 5) | 200 OK [http://98.216.157.206/keywords]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 98.216.157.206 at 2010-10-09 13:02:41) [GET]
+  Parameters: {"action"=>"show", "id"=>"stats", "controller"=>"users"}
+
+ActionController::UnknownAction (No action responded to show. Actions: already_attempted_friending?, current_user, do_follows_for_user, fetch, follow_from_list, follow_test, get_users_to_follow, home, index, logged_in, logged_in?, login_required, redirect_to_target_or_default, search_updates, shuffle_array, tweets, and users_from_keyword_search):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /home/paul/.gem/ruby/1.8/gems/ruby-debug-ide-0.4.9/lib/ruby-debug-ide.rb:109:in `debug_load'
+  /home/paul/.gem/ruby/1.8/gems/ruby-debug-ide-0.4.9/lib/ruby-debug-ide.rb:109:in `debug_program'
+  /home/paul/.gem/ruby/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:87
+  /home/paul/.gem/ruby/1.8/bin/rdebug-ide:19:in `load'
+  /home/paul/.gem/ruby/1.8/bin/rdebug-ide:19
+  -e:1:in `load'
+  -e:1
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#home (for 98.216.157.206 at 2010-10-09 13:02:43) [GET]
+  Parameters: {"action"=>"home", "controller"=>"users"}
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mFriending Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (0.2ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 1) ORDER BY created_at[0m
+Rendering template within layouts/application
+Rendering users/home
+Completed in 190ms (View: 16, DB: 4) | 200 OK [http://98.216.157.206/users/home]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 98.216.157.206 at 2010-10-09 13:02:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"keywords"}
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mKeyword Load (0.2ms)[0m   [0;1mSELECT * FROM `keywords` [0m
+  [4;35;1mkeywords_users Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `keywords_users`[0m
+  [4;36;1mKeyword Load (0.2ms)[0m   [0;1mSELECT * FROM `keywords` INNER JOIN `keywords_users` ON `keywords`.id = `keywords_users`.keyword_id WHERE (`keywords_users`.user_id = 1 ) [0m
+  [4;35;1mKeyword Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `keywords`[0m
+Rendering template within layouts/application
+Rendering keywords/index
+Rendered keywords/_form (4.7ms)
+Completed in 78ms (View: 27, DB: 6) | 200 OK [http://98.216.157.206/keywords]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 98.216.157.206 at 2010-10-09 13:03:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"keywords"}
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mKeyword Load (0.2ms)[0m   [0;1mSELECT * FROM `keywords` [0m
+  [4;35;1mkeywords_users Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `keywords_users`[0m
+  [4;36;1mKeyword Load (0.2ms)[0m   [0;1mSELECT * FROM `keywords` INNER JOIN `keywords_users` ON `keywords`.id = `keywords_users`.keyword_id WHERE (`keywords_users`.user_id = 1 ) [0m
+  [4;35;1mKeyword Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `keywords`[0m
+Rendering template within layouts/application
+Rendering keywords/index
+Rendered keywords/_form (17.5ms)
+Completed in 109ms (View: 53, DB: 6) | 200 OK [http://98.216.157.206/keywords]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 98.216.157.206 at 2010-10-09 13:04:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"keywords"}
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mKeyword Load (0.2ms)[0m   [0;1mSELECT * FROM `keywords` [0m
+  [4;35;1mkeywords_users Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `keywords_users`[0m
+  [4;36;1mKeyword Load (0.2ms)[0m   [0;1mSELECT * FROM `keywords` INNER JOIN `keywords_users` ON `keywords`.id = `keywords_users`.keyword_id WHERE (`keywords_users`.user_id = 1 ) [0m
+  [4;35;1mKeyword Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `keywords`[0m
+Rendering template within layouts/application
+Rendering keywords/index
+Rendered keywords/_form (4.1ms)
+Completed in 69ms (View: 27, DB: 4) | 200 OK [http://98.216.157.206/keywords]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 98.216.157.206 at 2010-10-09 13:04:22) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+Redirected to http://98.216.157.206:3000/
+Completed in 8ms (DB: 0) | 302 Found [http://98.216.157.206/logout]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 98.216.157.206 at 2010-10-09 13:04:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/index
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://98.216.157.206/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 98.216.157.206 at 2010-10-09 13:04:24) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Redirected to https://twitter.com/oauth/authenticate?oauth_token=KBkNIzMhtzsYMAlUMK9Qxt0V2EOptEoqhCBGeGX4&oauth_callback=http%3A%2F%2F98.216.157.206%2Foauth_callback
+Completed in 707ms (DB: 0) | 302 Found [http://98.216.157.206/login]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#oauth_callback (for 98.216.157.206 at 2010-10-09 13:04:26) [GET]
+  Parameters: {"action"=>"oauth_callback", "controller"=>"sessions", "oauth_token"=>"KBkNIzMhtzsYMAlUMK9Qxt0V2EOptEoqhCBGeGX4", "oauth_verifier"=>"2vddaiKtpViJkxHJaio3yrDC9nm31nVpDtMY"}
+  [4;36;1mUser Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`twitter_id` = '192785447') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTwitterAuth::GenericUser Load (0.5ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'paultweettest' AND `users`.id <> 1) LIMIT 1[0m
+  [4;36;1mTwitterAuth::GenericUser Load (0.6ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`twitter_id` = BINARY '192785447' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mTwitterAuth::GenericUser Load (0.5ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`remember_token` = BINARY 'a489743b84fdbb0e5bd9' AND `users`.id <> 1) LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'paultweettest' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`twitter_id` = BINARY '192785447' AND `users`.id <> 1) LIMIT 1[0m
+  [4;36;1mTwitterAuth::GenericUser Load (0.6ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`remember_token` = BINARY '5a7e2b37756cc48b0fb0' AND `users`.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-10-09 17:04:31', `remember_token_expires_at` = '2038-02-24 18:04:31', `remember_token` = '5a7e2b37756cc48b0fb0' WHERE `id` = 1[0m
+  [4;36;1mSQL (89.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://98.216.157.206:3000/
+Completed in 5070ms (DB: 97) | 302 Found [http://98.216.157.206/oauth_callback?oauth_token=KBkNIzMhtzsYMAlUMK9Qxt0V2EOptEoqhCBGeGX4&oauth_verifier=2vddaiKtpViJkxHJaio3yrDC9nm31nVpDtMY]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 98.216.157.206 at 2010-10-09 13:04:31) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Redirected to http://98.216.157.206:3000/users/home
+Completed in 159ms (DB: 2) | 302 Found [http://98.216.157.206/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#home (for 98.216.157.206 at 2010-10-09 13:04:31) [GET]
+  Parameters: {"action"=>"home", "controller"=>"users"}
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mFriending Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `friendings`[0m
+  [4;36;1mFriending Load (0.2ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 1) ORDER BY created_at[0m
+Rendering template within layouts/application
+Rendering users/home
+Completed in 75ms (View: 30, DB: 4) | 200 OK [http://98.216.157.206/users/home]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#home (for 98.216.157.206 at 2010-10-09 13:04:39) [GET]
+  Parameters: {"action"=>"home", "controller"=>"users"}
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mFriending Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `friendings`[0m
+  [4;36;1mFriending Load (0.2ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 1) ORDER BY created_at[0m
+Rendering template within layouts/application
+Rendering users/home
+Completed in 61ms (View: 15, DB: 4) | 200 OK [http://98.216.157.206/users/home]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 98.216.157.206 at 2010-10-09 13:04:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"keywords"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mKeyword Load (0.2ms)[0m   [0mSELECT * FROM `keywords` [0m
+  [4;36;1mkeywords_users Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `keywords_users`[0m
+  [4;35;1mKeyword Load (0.1ms)[0m   [0mSELECT * FROM `keywords` INNER JOIN `keywords_users` ON `keywords`.id = `keywords_users`.keyword_id WHERE (`keywords_users`.user_id = 1 ) [0m
+  [4;36;1mKeyword Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `keywords`[0m
+Rendering template within layouts/application
+Rendering keywords/index
+Rendered keywords/_form (3.7ms)
+Completed in 67ms (View: 18, DB: 4) | 200 OK [http://98.216.157.206/keywords]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 98.216.157.206 at 2010-10-09 13:05:43) [GET]
+  Parameters: {"action"=>"show", "id"=>"stats", "controller"=>"users"}
+
+ActionController::UnknownAction (No action responded to show. Actions: already_attempted_friending?, current_user, do_follows_for_user, fetch, follow_from_list, follow_test, get_users_to_follow, home, index, logged_in, logged_in?, login_required, redirect_to_target_or_default, search_updates, shuffle_array, stats, tweets, and users_from_keyword_search):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /home/paul/.gem/ruby/1.8/gems/ruby-debug-ide-0.4.9/lib/ruby-debug-ide.rb:109:in `debug_load'
+  /home/paul/.gem/ruby/1.8/gems/ruby-debug-ide-0.4.9/lib/ruby-debug-ide.rb:109:in `debug_program'
+  /home/paul/.gem/ruby/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:87
+  /home/paul/.gem/ruby/1.8/bin/rdebug-ide:19:in `load'
+  /home/paul/.gem/ruby/1.8/bin/rdebug-ide:19
+  -e:1:in `load'
+  -e:1
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#stats (for 98.216.157.206 at 2010-10-09 13:06:29) [GET]
+  Parameters: {"action"=>"stats", "controller"=>"users"}
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mFriending Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `friendings`[0m
+  [4;36;1mFriending Load (0.2ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 1) ORDER BY created_at[0m
+Rendering template within layouts/application
+Rendering users/stats
+Completed in 56ms (View: 17, DB: 4) | 200 OK [http://98.216.157.206/users/stats]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#stats (for 98.216.157.206 at 2010-10-09 13:06:32) [GET]
+  Parameters: {"action"=>"stats", "controller"=>"users"}
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mFriending Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `friendings`[0m
+  [4;36;1mFriending Load (0.2ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 1) ORDER BY created_at[0m
+Rendering template within layouts/application
+Rendering users/stats
+Completed in 51ms (View: 6, DB: 4) | 200 OK [http://98.216.157.206/users/stats]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#stats (for 98.216.157.206 at 2010-10-09 13:07:13) [GET]
+  Parameters: {"action"=>"stats", "controller"=>"users"}
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mFriending Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `friendings`[0m
+  [4;36;1mFriending Load (0.2ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 1) ORDER BY created_at[0m
+Rendering template within layouts/application
+Rendering users/stats
+Completed in 59ms (View: 13, DB: 4) | 200 OK [http://98.216.157.206/users/stats]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#stats (for 98.216.157.206 at 2010-10-09 13:08:47) [GET]
+  Parameters: {"action"=>"stats", "controller"=>"users"}
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mFriending Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `friendings`[0m
+  [4;36;1mFriending Load (0.4ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 1) ORDER BY created_at[0m
+Rendering template within layouts/application
+Rendering users/stats
+
+ActionView::TemplateError (undefined method `>' for []:Array) on line #3 of app/views/users/stats.html.erb:
+1: <p> We recently friended the following </p>
+2: 
+3: <% if @recent_friendings > 0 then %>
+4:     <% @recent_friendings.each do |recent_follow| %>
+5:         <%= link_to recent_follow.follow_id, "http://twitter.com/#{recent_follow.follow_id}" %> </br>
+6:     <% end %>
+
+    app/views/users/stats.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /home/paul/.gem/ruby/1.8/gems/ruby-debug-ide-0.4.9/lib/ruby-debug-ide.rb:109:in `debug_load'
+    /home/paul/.gem/ruby/1.8/gems/ruby-debug-ide-0.4.9/lib/ruby-debug-ide.rb:109:in `debug_program'
+    /home/paul/.gem/ruby/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:87
+    /home/paul/.gem/ruby/1.8/bin/rdebug-ide:19:in `load'
+    /home/paul/.gem/ruby/1.8/bin/rdebug-ide:19
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (270.8ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#stats (for 98.216.157.206 at 2010-10-09 13:09:07) [GET]
+  Parameters: {"action"=>"stats", "controller"=>"users"}
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mFriending Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `friendings`[0m
+  [4;36;1mFriending Load (0.2ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 1) ORDER BY created_at[0m
+Rendering template within layouts/application
+Rendering users/stats
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.size) on line #3 of app/views/users/stats.html.erb:
+1: <p> We recently friended the following </p>
+2: 
+3: <% if @recent_friendingss.size > 0 then %>
+4:     <% @recent_friendings.each do |recent_follow| %>
+5:         <%= link_to recent_follow.follow_id, "http://twitter.com/#{recent_follow.follow_id}" %> </br>
+6:     <% end %>
+
+    app/views/users/stats.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /home/paul/.gem/ruby/1.8/gems/ruby-debug-ide-0.4.9/lib/ruby-debug-ide.rb:109:in `debug_load'
+    /home/paul/.gem/ruby/1.8/gems/ruby-debug-ide-0.4.9/lib/ruby-debug-ide.rb:109:in `debug_program'
+    /home/paul/.gem/ruby/1.8/gems/ruby-debug-ide-0.4.9/bin/rdebug-ide:87
+    /home/paul/.gem/ruby/1.8/bin/rdebug-ide:19:in `load'
+    /home/paul/.gem/ruby/1.8/bin/rdebug-ide:19
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (118.1ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#stats (for 98.216.157.206 at 2010-10-09 13:09:22) [GET]
+  Parameters: {"action"=>"stats", "controller"=>"users"}
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mFriending Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `friendings`[0m
+  [4;36;1mFriending Load (0.2ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 1) ORDER BY created_at[0m
+Rendering template within layouts/application
+Rendering users/stats
+Completed in 214ms (View: 16, DB: 4) | 200 OK [http://98.216.157.206/users/stats]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#stats (for 98.216.157.206 at 2010-10-09 13:09:33) [GET]
+  Parameters: {"action"=>"stats", "controller"=>"users"}
+  [4;35;1mUser Columns (3.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mFriending Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `friendings`[0m
+  [4;36;1mFriending Load (1.5ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 1) ORDER BY created_at[0m
+Rendering template within layouts/application
+Rendering users/stats
+Completed in 96ms (View: 25, DB: 7) | 200 OK [http://98.216.157.206/users/stats]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 98.216.157.206 at 2010-10-09 13:09:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"keywords"}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mKeyword Load (0.2ms)[0m   [0mSELECT * FROM `keywords` [0m
+  [4;36;1mkeywords_users Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `keywords_users`[0m
+  [4;35;1mKeyword Load (0.2ms)[0m   [0mSELECT * FROM `keywords` INNER JOIN `keywords_users` ON `keywords`.id = `keywords_users`.keyword_id WHERE (`keywords_users`.user_id = 1 ) [0m
+  [4;36;1mKeyword Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `keywords`[0m
+Rendering template within layouts/application
+Rendering keywords/index
+Rendered keywords/_form (5.2ms)
+Completed in 66ms (View: 24, DB: 4) | 200 OK [http://98.216.157.206/keywords]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 98.216.157.206 at 2010-10-09 13:09:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"keywords"}
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mKeyword Load (0.3ms)[0m   [0mSELECT * FROM `keywords` [0m
+  [4;36;1mkeywords_users Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `keywords_users`[0m
+  [4;35;1mKeyword Load (0.2ms)[0m   [0mSELECT * FROM `keywords` INNER JOIN `keywords_users` ON `keywords`.id = `keywords_users`.keyword_id WHERE (`keywords_users`.user_id = 1 ) [0m
+  [4;36;1mKeyword Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `keywords`[0m
+Rendering template within layouts/application
+Rendering keywords/index
+Rendered keywords/_form (5.1ms)
+Completed in 72ms (View: 21, DB: 4) | 200 OK [http://98.216.157.206/keywords]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#stats (for 98.216.157.206 at 2010-10-09 13:10:02) [GET]
+  Parameters: {"action"=>"stats", "controller"=>"users"}
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mFriending Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `friendings`[0m
+  [4;36;1mFriending Load (0.6ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 1) ORDER BY created_at[0m
+Rendering template within layouts/application
+Rendering users/stats
+Completed in 59ms (View: 17, DB: 4) | 200 OK [http://98.216.157.206/users/stats]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#stats (for 98.216.157.206 at 2010-10-09 13:10:06) [GET]
+  Parameters: {"action"=>"stats", "controller"=>"users"}
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mFriending Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `friendings`[0m
+  [4;36;1mFriending Load (0.4ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 1) ORDER BY created_at[0m
+Rendering template within layouts/application
+Rendering users/stats
+Completed in 68ms (View: 17, DB: 4) | 200 OK [http://98.216.157.206/users/stats]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing KeywordsController#index (for 98.216.157.206 at 2010-10-09 13:10:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"keywords"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mKeyword Load (0.2ms)[0m   [0mSELECT * FROM `keywords` [0m
+  [4;36;1mkeywords_users Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `keywords_users`[0m
+  [4;35;1mKeyword Load (0.2ms)[0m   [0mSELECT * FROM `keywords` INNER JOIN `keywords_users` ON `keywords`.id = `keywords_users`.keyword_id WHERE (`keywords_users`.user_id = 1 ) [0m
+  [4;36;1mKeyword Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `keywords`[0m
+Rendering template within layouts/application
+Rendering keywords/index
+Rendered keywords/_form (4.2ms)
+Completed in 61ms (View: 18, DB: 4) | 200 OK [http://98.216.157.206/keywords]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#home (for 98.216.157.206 at 2010-10-09 13:10:09) [GET]
+  Parameters: {"action"=>"home", "controller"=>"users"}
+  [4;35;1mUser Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/home
+Completed in 250ms (View: 212, DB: 3) | 200 OK [http://98.216.157.206/users/home]

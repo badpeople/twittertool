@@ -20,7 +20,7 @@ module Main
         puts "just followed #{twitter_user}"
 
         #save as a friending
-        friending = Friending.new(:follow_id=>just_friended)
+        friending = Friending.new(:follow_id=>twitter_user)
         friending.user = user
         if friending.save
           "puts just saved friendling #{friending.to_yaml}"
@@ -28,6 +28,7 @@ module Main
       rescue => e
         puts "error trying to friend #{twitter_user}"
         puts e.message
+        puts e.backtrace
       end
 
     end

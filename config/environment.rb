@@ -28,6 +28,8 @@ Rails::Initializer.run do |config|
   # config.gem "aws-s3", :lib => "aws/s3"
 #  config.gem 'twitter-auth', :lib => 'twitter_auth'
   config.gem 'simple-rss'
+  config.gem 'twitter'
+  config.gem 'rand'
 
 
   # Only load the plugins named here, in the order given (default is alphabetical).

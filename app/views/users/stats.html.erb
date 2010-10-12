@@ -1,10 +1,7 @@
-
+<div class="main-text">
 <% if @recent_friendings.size > 0 then %>
-    <p> We recently friended the following </p>
+    We have followed <%= @recent_friendings.size %> twitter users for you.
 
-    <% @recent_friendings.each do |recent_follow| %>
-        <%= link_to recent_follow.follow_id, "http://twitter.com/#{recent_follow.follow_id}" %> </br>
-    <% end %>
 <% else %>
     Haven't followed any users yet.  Make sure you add some <%= link_to "keywords" ,:controller => 'keywords' %> so we know who to follow.  This list will fill up soon.
-<% end %>
+<% end %></div>

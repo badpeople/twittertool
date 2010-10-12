@@ -5,6 +5,7 @@ ActionController::Routing::Routes.draw do |map|
   map.signup 'signup', :controller => 'users', :action => 'new'
   map.logout 'logout', :controller => 'sessions', :action => 'destroy'
   map.login 'login', :controller => 'sessions', :action => 'new'
+  map.register 'register', :controller => 'users', :action => 'register'
   map.tweets 'users/tweets', :controller=>'users',:action => 'tweets'
   map.folow_test 'users/follow_test', :controller=>'users',:action => 'follow_test'
 
@@ -12,7 +13,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :sessions
 
-  map.resources :users,:collection=> {:home=>:get,:stats=>:get}
+  map.resources :users,:collection=> {:home=>:get,:stats=>:get,:register=>:get}
 
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,24 +1,27 @@
 <% title "Keywords" %>
 
-Keywords are how we search for users for to connect you with.  Pick some keywords below
-<table>
+<div class="main-text">
+  Keywords are how we search for users for to connect you with.  Pick some keywords
+  <hr />
+
+  <table class="keywords-table">
   <tr>
-    <td style="padding-right: 36px;" valign="top"><p class="keyword-header">Currently using...</p>
+    <td style="padding-right: 36px;" valign="top"><p class="keyword-header">Currently using</p>
         <% for keyword in @my_keywords %>
-                  <p><%= keyword.word %> <%= link_to "Remove" ,:action=>"remove",:id=>keyword %></p>
+                  <p><%= keyword.word %> <span class="add-keyword"><%= link_to "Remove" ,:action=>"remove",:id=>keyword %></span></p>
         <% end %>
     </td>
-    <td valign="top">
+    <td class="keyword-center" valign="top">
       <p class="keyword-header">Suggested Keywords</p>
       <% for keyword in @all_keywords %>
-          <p><%= keyword.word %> <%= link_to "Add" ,:action=>"attach",:id=>keyword %></p>
+          <p><%= keyword.word %> <span class="add-keyword"><%= link_to "Add" ,:action=>"attach",:id=>keyword %></span> </p>
       <% end %>
 
     </td>
     <td valign="top">
-      <p class="keyword-header">Type one in</p>
+      <p class="keyword-header"> Type one in</p>
       <%= render :partial => 'form' %>
 
     </td>
   </tr>
-</table>
+</table></div>

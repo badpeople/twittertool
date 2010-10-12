@@ -4,9 +4,9 @@ namespace :follow do
     include Main
 
     User.all.each do |user|
-      puts "doing all follows for: #{user.login}"
-      followed = follow(user)
-      puts "followed: #{followed.to_yaml}"
+      puts "doing follows for #{user.login}"
+      do_follows_for_user user
+
     end
   end
 

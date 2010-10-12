@@ -1,4 +1,4 @@
 <% form_for @keyword do |f| %>
-    <%= f.text_field :word %>
-  <%= f.submit %>
+    <%= f.text_field :word,:options=>{:length=>30} %>    <br/>
+  <%= f.submit "Add" %>
 <% end %>

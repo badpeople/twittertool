@@ -17,6 +17,8 @@ module TwitterAuth
         path = TwitterAuth.path_prefix + path
         path = append_extension_to(path)
 
+        puts "path: #{path}"
+
         response = super
 
         handle_response(response)

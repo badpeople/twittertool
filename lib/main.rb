@@ -1,4 +1,5 @@
 require 'rand'
+require 'json'
 
 module Main
 
@@ -65,11 +66,41 @@ module Main
     users_to_follow
   end
 
-  def do_follows_for_user(user)
-    users_to_follow = get_users_to_follow(user)
-    just_followed = follow_from_list(user,users_to_follow)
+  def should_do_follows(user)
+    friendings = Friending.find_all_by_user_id(user.id,:conditions=>["created_at > ?",Time.now - (60 * 60 * 24)])
+    !friendings.nil? || friendings.size < 100
 
-    puts "for user: #{user.login}, just followed #{just_followed.to_yaml}"
+  end
+
+  def do_follows_for_user(user)
+    if should_do_follows(user) then
+      users_to_follow = get_users_to_follow(user)
+      just_followed = follow_from_list(user, users_to_follow)
+
+      puts "for user: #{user.login}, just followed #{just_followed.to_yaml}"
+    else
+      puts "too many follows for #{user.login}"
+    end
+
+  end
+
+  def user_ids_to_usernames(user, ids)
+#    /users/lookup.json?user_id=67517688
+    names = []
+    ret = user.twitter.get("/1/users/lookup.json",'user_id'=>ids.join(","))
+    users = JSON.parse(ret)
+
+  end
+
+  def recent_followed_usernames user
+    ids = []
+
+    Friending.find_all_by_user_id(current_user.id,:order=>"created_at").each do |friending|
+      ids << friending.follow_id
+    end
+
+    user_ids_to_usernames(user, ids)
+
 
   end
 

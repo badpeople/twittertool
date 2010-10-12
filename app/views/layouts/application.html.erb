@@ -10,18 +10,10 @@
 		<meta name="robots" content="all" />
         <%= stylesheet_link_tag 'application' %>
 
-		<!-- Javascript -->
-		<!--<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2'></script>-->
-		<!--<script src="assets/js/main.js" type="text/javascript" charset="utf-8"></script>-->
-		<!--<script src="assets/js/jquery.pngFix.js" type="text/javascript" charset="utf-8"></script>-->
-		<!--[if IE]>
-		<!--<script src="assets/js/ie.js" type="text/javascript" charset="utf-8"></script>-->
-		<![endif]-->
 
-		<!-- Title -->
-		<title>FollowATHON | Home</title>
-
-	</head>
+      <!-- Title -->
+      <title><%= h(yield(:title) || "") %> | FollowATHON</title>
+    </head>
 	<body id="home">
 		<div id="container">
 			<div id="top">
@@ -34,7 +26,7 @@
                         <td>
                           <div id="logo">
                             <%= image_tag "twitter_logo.png",:class => "title-img" %>
-                            <span class="main-title">FollowATHON</span>
+                            <span class="main-title"><%= link_to "FollowATHON",:controller=>"users",:action=>"home" %></span>
                           </div>
                         </td>
                         <td class="main-nav-container">
@@ -62,15 +54,15 @@
 					 <!-- END #logo -->
 				</div> <!-- END .content -->
 				<div id="banner">
-					<ul>
-						<li><%= link_to "HOW IT WORKS",:controller => "static",:action => "howitworks" %></li>
-						<li><%= link_to "OUR PROMISE",:controller => "static",:action => "ourpromise" %></li>
-						<li><%= link_to "HOW IT WORKS",:controller => "static",:action => "howitworks" %></li>
-					</ul>
-					<div class="right">
-						<h2>Your apps <span class="bold">sold.</span></h2>
-						<h2>Your app store <span class="bold">delivered.</span></h2>
+
+					<div class="left">
+						<h2>Get tons of follows who are <span class="bold">interested in you.</span></h2>
+						<!--<h2>Follow people that you <span class="bold">delivered.</span></h2>-->
 					</div> <!-- END .right -->
+                  <ul>
+						<li><%= link_to "HOW IT WORKS","/register" %></li>
+						<li><%= link_to "OUR PROMISE","/register" %></li>
+					</ul>
 				</div> <!-- END #banner -->
 				<div class="content">
 					  <%= yield %>

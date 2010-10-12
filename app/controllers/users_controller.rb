@@ -21,12 +21,18 @@ class UsersController < ApplicationController
   end
 
   def home
-
+    @my_keywords = current_user.keywords
   end
 
   def stats
 
+#    @recent_friendings = recent_followed_usernames(current_user)
     @recent_friendings = Friending.find_all_by_user_id(current_user.id,:order=>"created_at")
+
+
+  end
+
+  def register
 
 
   end

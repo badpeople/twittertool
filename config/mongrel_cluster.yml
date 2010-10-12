@@ -1,0 +1,10 @@
+---
+group: paul
+address: 127.0.0.1
+log_file: log/mongrel.log
+port: "3000"
+cwd: /var/rails/twittertool
+environment: production
+user: paul
+pid_file: /var/rails/twittertool/tmp/mongrel.pid
+servers: 3

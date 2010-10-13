@@ -7,4 +7,4 @@ cwd: /var/rails/twittertool
 environment: production
 user: paul
 pid_file: /var/rails/twittertool/tmp/mongrel.pid
-servers: 3
+servers: 1

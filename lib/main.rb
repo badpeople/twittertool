@@ -20,8 +20,8 @@ module Main
           break
         end
 
+        follow_result = user.twitter.post('/friendships/create.json','user_id'=>twitter_user)
         # execute the follow
-        follow_result = user.twitter.post('/friendships/create','user_id'=>twitter_user)
         just_friended << twitter_user
         puts "just followed #{twitter_user}"
 
@@ -75,7 +75,7 @@ module Main
     filtered_users_to_follow = []
     users_to_follow.each do |id|
       data = id_to_full_data(user,id)
-      filtered_users_to_follow << data unless !legit_user?(data)
+      filtered_users_to_follow << id unless !legit_user?(data)
     end
 
     filtered_users_to_follow

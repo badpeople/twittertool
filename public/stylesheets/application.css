@@ -81,8 +81,8 @@ body                            {background: #fff url(../images/bg_gradient.png)
 #container                      {width: 840px; margin: 25px auto; overflow: hidden;}
 #top                            {background: url(../images/wrapper_top.png) no-repeat scroll bottom; float: left;width: 840px; height: 27px; }
 div#footer                      {background: url(../images/wrapper_bottom.png) no-repeat scroll bottom; float: left;width: 840px; height: 46px;}
-div#content-wrap                {background: transparent url(../images/wrapper_strip.png) repeat-y; float: left; }
-div.content                     {width: 780px; float: left;padding:30px 45px 10px;}
+div#content-wrap                {background: transparent url(../images/wrapper_strip.png) repeat-y; float: left;width:840px; }
+div.content                     {width: 780px; float: left;padding:0 30px 0 0;margin-left: 21px;}
 div#logo                        {float: left; }
 div#slogan                      {position: absolute; top: 54px; left: 230px;}
 div#banner                      {padding:22px 20px 0 0;background: #0d223a url(../images/banner_bolt.png) scroll 166px 0 no-repeat; float: left; width: 780px; margin-left: 21px; padding-bottom: 10px;}
@@ -92,12 +92,12 @@ div.content-right               {width: 536px; float: left; padding: 25px 0 0 35
 div.flash-ad                    {width: 490px; height: 130px;}
 
 div.content-left                {width: 200px;}
-div.content div.left            {width: 245px; padding-top: 20px;}
+div.content div.left            {width:100%; padding-top: 20px;}
 div.content div.last            {padding-left: 25px;}
 div.content div.last ul li      {background:url("../images/blue_bullet.png") no-repeat scroll 0px 5px transparent;list-style-type: none; padding-left: 15px;}
 
 /*Main Nav*/
-div.main-nav                    {margin: -30px 13px 0 0;}
+div.main-nav                    {margin: -30px 13px 0 0;white-space:nowrap;}
 div.main-nav ul li              {margin-left: 0; padding-left: 5px;}
 div.main-nav ul li.divider      {vertical-align: top;}
 
@@ -265,6 +265,8 @@ span.main-title > a{
 .main-nav-container
 {
     vertical-align: top;
+    width: 100px;
+
 }
 
 .title-img

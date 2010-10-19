@@ -889,3 +889,1000 @@
   [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
   [4;36;1mFriending Create (0.5ms)[0m   [0;1mINSERT INTO `friendings` (`created_at`, `follow_id`, `updated_at`, `user_id`) VALUES('2010-10-09 16:49:44', 54181131, '2010-10-09 16:49:44', 1)[0m
   [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (268.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (106.9ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mFriending Columns (132.8ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (83.7ms)[0m   [0mSELECT * FROM `friendings` WHERE (created_at > '2010-10-13 21:14:21') AND (`friendings`.`user_id` = 2) [0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (19.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mFriending Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (70.7ms)[0m   [0mSELECT * FROM `friendings` WHERE (created_at > '2010-10-07 21:14:56') AND (`friendings`.`user_id` = 2) [0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (38.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mFriending Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (27.0ms)[0m   [0mSELECT * FROM `friendings` WHERE (created_at > '2010-10-13 21:15:18') AND (`friendings`.`user_id` = 2) [0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mFriending Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (20.7ms)[0m   [0mSELECT * FROM `friendings` WHERE (created_at > '2010-10-13 21:18:52') AND (`friendings`.`user_id` = 2) [0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mFriending Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (1.2ms)[0m   [0mSELECT * FROM `friendings` WHERE (created_at > '2010-10-13 21:20:24') AND (`friendings`.`user_id` = 2) [0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mFriending Load (0.9ms)[0m   [0mSELECT * FROM `friendings` WHERE (created_at > '2010-10-13 21:20:24') AND (`friendings`.`user_id` = 3) [0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mFriending Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (59.1ms)[0m   [0mSELECT * FROM `friendings` WHERE (created_at > '2010-10-07 21:20:41') AND (`friendings`.`user_id` = 2) [0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mFriending Columns (3.5ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (92.3ms)[0m   [0mSELECT * FROM `friendings` WHERE (created_at > '2010-10-07 21:21:19') AND (`friendings`.`user_id` = 2) [0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mFriending Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (102.8ms)[0m   [0mSELECT * FROM `friendings` WHERE (created_at > '2010-10-07 21:26:47') AND (`friendings`.`user_id` = 2) [0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mFriending Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (48.0ms)[0m   [0mSELECT * FROM `friendings` WHERE (created_at > '2010-10-07 21:27:18') AND (`friendings`.`user_id` = 2) [0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (21.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'paultweettest') LIMIT 1[0m
+  [4;36;1mFriending Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (46.7ms)[0m   [0mSELECT * FROM `friendings` WHERE (created_at > '2010-10-07 21:28:49') AND (`friendings`.`user_id` = 2) [0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'paultweettest') LIMIT 1[0m
+  [4;36;1mFriending Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (44.6ms)[0m   [0mSELECT * FROM `friendings` WHERE (created_at > '2010-10-07 21:28:59') AND (`friendings`.`user_id` = 2) [0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'paultweettest') LIMIT 1[0m
+  [4;36;1mFriending Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (0.9ms)[0m   [0mSELECT * FROM `friendings` WHERE (created_at > '2010-10-07 21:30:32') AND (`friendings`.`user_id` = 4) [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+  [4;35;1mFriending Load (44.6ms)[0m   [0mSELECT * FROM `friendings` WHERE (created_at > '2010-10-07 21:30:32') AND (`friendings`.`user_id` = 2) [0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'paultweettest') LIMIT 1[0m
+  [4;36;1mFriending Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (19.8ms)[0m   [0mSELECT * FROM `friendings` WHERE (created_at > '2010-10-13 21:30:44') AND (`friendings`.`user_id` = 4) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+  [4;35;1mFriending Load (1.3ms)[0m   [0mSELECT * FROM `friendings` WHERE (created_at > '2010-10-13 21:30:44') AND (`friendings`.`user_id` = 2) [0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (301.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (26.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'paultweettest') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'paultweettest') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'paultweettest') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'paultweettest') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'paultweettest') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'paultweettest') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'paultweettest') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'paultweettest') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'paultweettest') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'paultweettest') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'paultweettest') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mFriending Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mFriending Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mFriending Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mFriending Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mFriending Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mFriending Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mFriending Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mFriending Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+  [4;36;1mFriending Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (117.9ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2) ORDER BY created_at[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (3.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+  [4;36;1mFriending Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (0.7ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2) ORDER BY created_at[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+  [4;36;1mFriending Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+  [4;36;1mFriending Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (0.7ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2) ORDER BY created_at[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (140.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (24.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (255.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (89.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+  [4;36;1mFriending Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (32.1ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2) ORDER BY created_at[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (6.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (43.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+  [4;36;1mFriending Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (0.7ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2) ORDER BY created_at[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+  [4;36;1mFriending Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (0.5ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2) ORDER BY created_at[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+  [4;36;1mFriending Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (0.5ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2) ORDER BY created_at[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+  [4;36;1mFriending Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (0.5ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2) ORDER BY created_at[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+  [4;36;1mFriending Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (0.5ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2) ORDER BY created_at[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (96.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+  [4;36;1mFriending Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (0.5ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2) ORDER BY created_at[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+  [4;36;1mFriending Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (0.5ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2) ORDER BY created_at[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+  [4;36;1mFriending Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (0.6ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2) ORDER BY created_at[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+  [4;36;1mFriending Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (4.9ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2) ORDER BY created_at[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+  [4;36;1mFriending Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (0.6ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2) ORDER BY created_at[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+  [4;36;1mFriending Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (0.5ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2) ORDER BY created_at[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (16.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (10.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+  [4;36;1mFriending Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (27.1ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2) ORDER BY created_at[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+  [4;36;1mFriending Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (0.5ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2) ORDER BY created_at[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+  [4;36;1mFriending Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (0.5ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2) ORDER BY created_at[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+  [4;36;1mFriending Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (0.5ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2) ORDER BY created_at[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+  [4;36;1mFriending Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (0.5ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2) ORDER BY created_at[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+  [4;36;1mFriending Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (0.6ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2) ORDER BY created_at[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (18.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (23.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (12.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+  [4;36;1mFriending Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (230.8ms)[0m   [0mSELECT * FROM `friendings` WHERE (created_at < '2010-10-20 21:22:59') AND (`friendings`.`user_id` = 2) ORDER BY created_at[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+  [4;36;1mFriending Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (55.9ms)[0m   [0mSELECT * FROM `friendings` WHERE (created_at < '2010-10-14 21:27:21') AND (`friendings`.`user_id` = 2) ORDER BY created_at[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+  [4;36;1mFriending Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (34.4ms)[0m   [0mSELECT * FROM `friendings` WHERE (created_at < '2010-10-14 21:34:13') AND (`friendings`.`user_id` = 2) ORDER BY created_at[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (3.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+  [4;36;1mFriending Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (91.9ms)[0m   [0mSELECT * FROM `friendings` WHERE (created_at < '2010-10-14 22:08:35') AND (`friendings`.`user_id` = 2) ORDER BY created_at[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+  [4;36;1mFriending Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (63.5ms)[0m   [0mSELECT * FROM `friendings` WHERE (created_at < '2010-10-14 22:09:26') AND (`friendings`.`user_id` = 2) ORDER BY created_at[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+  [4;36;1mFriending Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (118.5ms)[0m   [0mSELECT * FROM `friendings` WHERE (created_at < '2010-10-14 22:10:42') AND (`friendings`.`user_id` = 2) ORDER BY created_at[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+  [4;36;1mFriending Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (43.5ms)[0m   [0mSELECT * FROM `friendings` WHERE (created_at < '2010-10-14 22:12:53') AND (`friendings`.`user_id` = 2) ORDER BY created_at[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+  [4;36;1mFriending Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (70.4ms)[0m   [0mSELECT * FROM `friendings` WHERE (created_at < '2010-10-14 22:14:26') AND (`friendings`.`user_id` = 2) ORDER BY created_at[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+  [4;36;1mFriending Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (71.3ms)[0m   [0mSELECT * FROM `friendings` WHERE (created_at < '2010-10-14 22:14:39') AND (`friendings`.`user_id` = 2) ORDER BY created_at[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+  [4;36;1mFriending Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (115.1ms)[0m   [0mSELECT * FROM `friendings` WHERE (created_at < '2010-10-14 22:15:26') AND (`friendings`.`user_id` = 2) ORDER BY created_at[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+  [4;36;1mFriending Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (53.7ms)[0m   [0mSELECT * FROM `friendings` WHERE (created_at < '2010-10-14 22:15:53') AND (`friendings`.`user_id` = 2) ORDER BY created_at[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (24.8ms)[0m   [0mSELECT * FROM `users` [0m
+  [4;36;1mFriending Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (0.9ms)[0m   [0mSELECT * FROM `friendings` WHERE (created_at > '2010-10-16 22:17:59') AND (`friendings`.`user_id` = 2) [0m
+  [4;36;1mkeywords_users Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `keywords_users`[0m
+  [4;35;1mKeyword Load (0.1ms)[0m   [0mSELECT * FROM `keywords` INNER JOIN `keywords_users` ON `keywords`.id = `keywords_users`.keyword_id WHERE (`keywords_users`.user_id = 2 ) [0m
+  [4;36;1mKeyword Columns (24.8ms)[0m   [0;1mSHOW FIELDS FROM `keywords`[0m
+  [4;35;1mFriending Load (1.5ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 88968562) [0m
+  [4;36;1mFriending Load (24.7ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 152676259) [0m
+  [4;35;1mFriending Load (1.2ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 101571115) [0m
+  [4;36;1mFriending Load (1.3ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 118115962) [0m
+  [4;35;1mFriending Load (1.1ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 63345902) [0m
+  [4;36;1mFriending Load (1.2ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 49139122) [0m
+  [4;35;1mFriending Load (1.2ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 6291259) [0m
+  [4;36;1mFriending Load (1.1ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 61403326) [0m
+  [4;35;1mFriending Load (1.2ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 149898798) [0m
+  [4;36;1mFriending Load (1.2ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 154394886) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mFriending Create (118.6ms)[0m   [0;1mINSERT INTO `friendings` (`created_at`, `follow_id`, `updated_at`, `user_id`) VALUES('2010-10-18 02:18:04', 88968562, '2010-10-18 02:18:04', 2)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFriending Create (0.4ms)[0m   [0mINSERT INTO `friendings` (`created_at`, `follow_id`, `updated_at`, `user_id`) VALUES('2010-10-18 02:18:05', 152676259, '2010-10-18 02:18:05', 2)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` [0m
+  [4;36;1mFriending Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (13.6ms)[0m   [0mSELECT * FROM `friendings` WHERE (created_at > '2010-10-16 22:18:16') AND (`friendings`.`user_id` = 2) [0m
+  [4;36;1mkeywords_users Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `keywords_users`[0m
+  [4;35;1mKeyword Load (0.2ms)[0m   [0mSELECT * FROM `keywords` INNER JOIN `keywords_users` ON `keywords`.id = `keywords_users`.keyword_id WHERE (`keywords_users`.user_id = 2 ) [0m
+  [4;36;1mKeyword Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `keywords`[0m
+  [4;35;1mFriending Load (1.3ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 86568196 AND `friendings`.`user_id` = 2) [0m
+  [4;36;1mFriending Load (1.4ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 116116680 AND `friendings`.`user_id` = 2) [0m
+  [4;35;1mFriending Load (1.4ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 147187684 AND `friendings`.`user_id` = 2) [0m
+  [4;36;1mFriending Load (1.8ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 6291259 AND `friendings`.`user_id` = 2) [0m
+  [4;35;1mFriending Load (1.9ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 6067216 AND `friendings`.`user_id` = 2) [0m
+  [4;36;1mFriending Load (2.1ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 149077794 AND `friendings`.`user_id` = 2) [0m
+  [4;35;1mFriending Load (0.9ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 49139122 AND `friendings`.`user_id` = 2) [0m
+  [4;36;1mFriending Load (0.8ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 16712700 AND `friendings`.`user_id` = 2) [0m
+  [4;35;1mFriending Load (1.0ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 971807 AND `friendings`.`user_id` = 2) [0m
+  [4;36;1mFriending Load (1.1ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 101571115 AND `friendings`.`user_id` = 2) [0m
+  [4;35;1mFriending Load (1.2ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 816097 AND `friendings`.`user_id` = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFriending Create (24.9ms)[0m   [0mINSERT INTO `friendings` (`created_at`, `follow_id`, `updated_at`, `user_id`) VALUES('2010-10-18 02:18:58', 86568196, '2010-10-18 02:18:58', 2)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mFriending Create (2.1ms)[0m   [0;1mINSERT INTO `friendings` (`created_at`, `follow_id`, `updated_at`, `user_id`) VALUES('2010-10-18 02:19:59', 116116680, '2010-10-18 02:19:59', 2)[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFriending Create (0.5ms)[0m   [0mINSERT INTO `friendings` (`created_at`, `follow_id`, `updated_at`, `user_id`) VALUES('2010-10-18 02:20:06', 147187684, '2010-10-18 02:20:06', 2)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mFriending Create (0.7ms)[0m   [0;1mINSERT INTO `friendings` (`created_at`, `follow_id`, `updated_at`, `user_id`) VALUES('2010-10-18 02:20:10', 149077794, '2010-10-18 02:20:10', 2)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFriending Create (0.6ms)[0m   [0mINSERT INTO `friendings` (`created_at`, `follow_id`, `updated_at`, `user_id`) VALUES('2010-10-18 02:20:23', 49139122, '2010-10-18 02:20:23', 2)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mFriending Create (0.5ms)[0m   [0;1mINSERT INTO `friendings` (`created_at`, `follow_id`, `updated_at`, `user_id`) VALUES('2010-10-18 02:20:30', 101571115, '2010-10-18 02:20:30', 2)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+  [4;36;1mFriending Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (19.9ms)[0m   [0mSELECT * FROM `friendings` WHERE (created_at < '2010-10-14 22:21:43') AND (`friendings`.`user_id` = 2) ORDER BY created_at[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (22.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (70.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (117.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+** TwitterAuth initialized properly.
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+** TwitterAuth initialized properly.
+** TwitterAuth initialized properly.
+** TwitterAuth initialized properly.
+** TwitterAuth initialized properly.
+** TwitterAuth initialized properly.
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (16.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (28.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (3.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (17.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (36.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (13.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (3.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (4.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (5.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (3.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'toosoondude') LIMIT 1[0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` [0m
+  [4;36;1mFriending Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (1.0ms)[0m   [0mSELECT * FROM `friendings` WHERE (created_at > '2010-10-17 23:04:31') AND (`friendings`.`user_id` = 2) [0m
+  [4;36;1mkeywords_users Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `keywords_users`[0m
+  [4;35;1mKeyword Load (4.6ms)[0m   [0mSELECT * FROM `keywords` INNER JOIN `keywords_users` ON `keywords`.id = `keywords_users`.keyword_id WHERE (`keywords_users`.user_id = 2 ) [0m
+  [4;36;1mKeyword Columns (3.4ms)[0m   [0;1mSHOW FIELDS FROM `keywords`[0m
+  [4;35;1mFriending Load (3.3ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 6129075) [0m
+  [4;36;1mFriending Load (1.8ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 98829098) [0m
+  [4;35;1mFriending Load (4.5ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 21493440) [0m
+  [4;36;1mFriending Load (0.9ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 129061047) [0m
+  [4;35;1mFriending Load (0.8ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 150709489) [0m
+  [4;36;1mFriending Load (0.8ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 12519598) [0m
+  [4;35;1mFriending Load (1.9ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 21537306) [0m
+  [4;36;1mFriending Load (4.3ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 154097178) [0m
+  [4;35;1mFriending Load (7.5ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 131801405) [0m
+  [4;36;1mFriending Load (0.9ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 4274138) [0m
+  [4;35;1mFriending Load (5.5ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 69820901) [0m
+  [4;36;1mFriending Load (0.7ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 131801405) [0m
+  [4;35;1mFriending Load (0.9ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 82164586) [0m
+  [4;36;1mFriending Load (0.8ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 1862327) [0m
+  [4;35;1mFriending Load (1.6ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 3837632) [0m
+  [4;36;1mFriending Load (1.0ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 163249903) [0m
+  [4;35;1mFriending Load (2.5ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 79787408) [0m
+  [4;36;1mFriending Load (0.8ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 10895367) [0m
+  [4;35;1mFriending Load (2.1ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 19094149) [0m
+  [4;36;1mFriending Load (1.0ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 102613248) [0m
+  [4;35;1mFriending Load (2.6ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 148687263) [0m
+  [4;36;1mFriending Load (0.9ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 154981178) [0m
+  [4;35;1mFriending Load (0.8ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 17824725) [0m
+  [4;36;1mFriending Load (0.8ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 90188525) [0m
+  [4;35;1mFriending Load (0.9ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 152676259) [0m
+  [4;36;1mFriending Load (1.1ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 81957194) [0m
+  [4;35;1mFriending Load (1.1ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 138521297) [0m
+  [4;36;1mFriending Load (0.8ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 23337427) [0m
+  [4;35;1mFriending Load (1.1ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 7218180) [0m
+  [4;36;1mFriending Load (0.5ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` IS NULL) [0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` [0m
+  [4;36;1mFriending Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (1.7ms)[0m   [0mSELECT * FROM `friendings` WHERE (created_at > '2010-10-17 23:05:24') AND (`friendings`.`user_id` = 2) [0m
+  [4;36;1mkeywords_users Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `keywords_users`[0m
+  [4;35;1mKeyword Load (0.2ms)[0m   [0mSELECT * FROM `keywords` INNER JOIN `keywords_users` ON `keywords`.id = `keywords_users`.keyword_id WHERE (`keywords_users`.user_id = 2 ) [0m
+  [4;36;1mKeyword Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `keywords`[0m
+  [4;35;1mFriending Load (1.6ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 6129075 AND `friendings`.`user_id` = 2) [0m
+  [4;36;1mFriending Load (2.0ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 12519598 AND `friendings`.`user_id` = 2) [0m
+  [4;35;1mFriending Load (1.6ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 107343607 AND `friendings`.`user_id` = 2) [0m
+  [4;36;1mFriending Load (1.6ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 94103950 AND `friendings`.`user_id` = 2) [0m
+  [4;35;1mFriending Load (1.6ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 84982640 AND `friendings`.`user_id` = 2) [0m
+  [4;36;1mFriending Load (1.6ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 150865291 AND `friendings`.`user_id` = 2) [0m
+  [4;35;1mFriending Load (1.4ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 4021398 AND `friendings`.`user_id` = 2) [0m
+  [4;36;1mFriending Load (1.8ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 141617628 AND `friendings`.`user_id` = 2) [0m
+  [4;35;1mFriending Load (1.4ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 126170488 AND `friendings`.`user_id` = 2) [0m
+  [4;36;1mFriending Load (2.1ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 150709489 AND `friendings`.`user_id` = 2) [0m
+  [4;35;1mFriending Load (1.7ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 10895367 AND `friendings`.`user_id` = 2) [0m
+  [4;36;1mFriending Load (2.1ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 152676259 AND `friendings`.`user_id` = 2) [0m
+  [4;35;1mFriending Load (1.6ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 148687263 AND `friendings`.`user_id` = 2) [0m
+  [4;36;1mFriending Load (1.4ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 118493469 AND `friendings`.`user_id` = 2) [0m
+  [4;35;1mFriending Load (1.4ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 26612756 AND `friendings`.`user_id` = 2) [0m
+  [4;36;1mFriending Load (1.4ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 21537306 AND `friendings`.`user_id` = 2) [0m
+  [4;35;1mFriending Load (0.2ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 126170488 AND `friendings`.`user_id` = 2) [0m
+  [4;36;1mFriending Load (2.2ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 113192125 AND `friendings`.`user_id` = 2) [0m
+  [4;35;1mFriending Load (1.7ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 60433648 AND `friendings`.`user_id` = 2) [0m
+  [4;36;1mFriending Load (1.4ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 21493440 AND `friendings`.`user_id` = 2) [0m
+  [4;35;1mFriending Load (1.4ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 106928832 AND `friendings`.`user_id` = 2) [0m
+  [4;36;1mFriending Load (1.3ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 7918529 AND `friendings`.`user_id` = 2) [0m
+  [4;35;1mFriending Load (1.5ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 163249903 AND `friendings`.`user_id` = 2) [0m
+  [4;36;1mFriending Load (1.5ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 95655299 AND `friendings`.`user_id` = 2) [0m
+  [4;35;1mFriending Load (1.4ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 98829098 AND `friendings`.`user_id` = 2) [0m
+  [4;36;1mFriending Load (1.4ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 7218180 AND `friendings`.`user_id` = 2) [0m
+  [4;35;1mFriending Load (2.1ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 13175956 AND `friendings`.`user_id` = 2) [0m
+  [4;36;1mFriending Load (1.6ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 154097178 AND `friendings`.`user_id` = 2) [0m
+  [4;35;1mFriending Load (1.6ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 153287939 AND `friendings`.`user_id` = 2) [0m
+  [4;36;1mFriending Load (2.1ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 102613248 AND `friendings`.`user_id` = 2) [0m
+  [4;35;1mFriending Load (1.9ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 82164586 AND `friendings`.`user_id` = 2) [0m
+  [4;36;1mFriending Load (1.5ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 1862327 AND `friendings`.`user_id` = 2) [0m
+  [4;35;1mFriending Load (2.3ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 154981178 AND `friendings`.`user_id` = 2) [0m
+  [4;36;1mFriending Load (3.8ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 3837632 AND `friendings`.`user_id` = 2) [0m
+  [4;35;1mFriending Load (1.6ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` = 113662967 AND `friendings`.`user_id` = 2) [0m
+  [4;36;1mFriending Load (0.5ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`follow_id` IS NULL AND `friendings`.`user_id` = 2) [0m
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` [0m
+  [4;36;1mFriending Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (1.0ms)[0m   [0mSELECT * FROM `friendings` WHERE (created_at > '2010-10-17 23:05:52') AND (`friendings`.`user_id` = 2) [0m
+  [4;36;1mkeywords_users Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `keywords_users`[0m
+  [4;35;1mKeyword Load (0.1ms)[0m   [0mSELECT * FROM `keywords` INNER JOIN `keywords_users` ON `keywords`.id = `keywords_users`.keyword_id WHERE (`keywords_users`.user_id = 2 ) [0m
+  [4;36;1mKeyword Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `keywords`[0m
+  [4;35;1mFriending Load (1.4ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 68972054) [0m
+  [4;36;1mFriending Load (0.3ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 154981178) [0m
+  [4;35;1mFriending Load (0.8ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 141617628) [0m
+  [4;36;1mFriending Load (0.7ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 143292861) [0m
+  [4;35;1mFriending Load (0.1ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 10895367) [0m
+  [4;36;1mFriending Load (0.3ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 1862327) [0m
+  [4;35;1mFriending Load (0.2ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 12519598) [0m
+  [4;36;1mFriending Load (0.7ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 126170488) [0m
+  [4;35;1mFriending Load (0.7ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 157388880) [0m
+  [4;36;1mFriending Load (0.1ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 152676259) [0m
+  [4;35;1mFriending Load (1.0ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 70670687) [0m
+  [4;36;1mFriending Load (0.2ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 7218180) [0m
+  [4;35;1mFriending Load (0.8ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 113192125) [0m
+  [4;36;1mFriending Load (0.7ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 128974268) [0m
+  [4;35;1mFriending Load (0.8ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 94103950) [0m
+  [4;36;1mFriending Load (1.0ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 89883720) [0m
+  [4;35;1mFriending Load (0.2ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 21493440) [0m
+  [4;36;1mFriending Load (0.2ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 154097178) [0m
+  [4;35;1mFriending Load (0.1ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 102613248) [0m
+  [4;36;1mFriending Load (0.1ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 6129075) [0m
+  [4;35;1mFriending Load (0.2ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 163249903) [0m
+  [4;36;1mFriending Load (0.8ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 10236766) [0m
+  [4;35;1mFriending Load (0.7ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 27803971) [0m
+  [4;36;1mFriending Load (0.2ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 148687263) [0m
+  [4;35;1mFriending Load (0.2ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 82164586) [0m
+  [4;36;1mFriending Load (0.1ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 138521297) [0m
+  [4;35;1mFriending Load (0.8ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 4021398) [0m
+  [4;36;1mFriending Load (0.1ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 3837632) [0m
+  [4;35;1mFriending Load (1.0ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 109069523) [0m
+  [4;36;1mFriending Load (0.8ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 18174207) [0m
+  [4;35;1mFriending Load (0.7ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 71759827) [0m
+  [4;36;1mFriending Load (0.2ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 141617628) [0m
+  [4;35;1mFriending Load (0.1ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 150709489) [0m
+  [4;36;1mFriending Load (1.2ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 7918529) [0m
+  [4;35;1mFriending Load (0.9ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 80010064) [0m
+  [4;36;1mFriending Load (0.2ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 21537306) [0m
+  [4;35;1mFriending Load (0.1ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` IS NULL) [0m
+** TwitterAuth initialized properly.
+** TwitterAuth initialized properly.
+** TwitterAuth initialized properly.
+** TwitterAuth initialized properly.
+** TwitterAuth initialized properly.
+** TwitterAuth initialized properly.
+** TwitterAuth initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` [0m
+  [4;36;1mFriending Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `friendings`[0m
+  [4;35;1mFriending Load (1.2ms)[0m   [0mSELECT * FROM `friendings` WHERE (created_at > '2010-10-17 23:15:54') AND (`friendings`.`user_id` = 2) [0m
+  [4;36;1mkeywords_users Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `keywords_users`[0m
+  [4;35;1mKeyword Load (0.2ms)[0m   [0mSELECT * FROM `keywords` INNER JOIN `keywords_users` ON `keywords`.id = `keywords_users`.keyword_id WHERE (`keywords_users`.user_id = 2 ) [0m
+  [4;36;1mKeyword Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `keywords`[0m
+  [4;35;1mFriending Load (0.6ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 21537306) [0m
+  [4;36;1mFriending Load (1.4ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 1844961) [0m
+  [4;35;1mFriending Load (2.4ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 19819853) [0m
+  [4;36;1mFriending Load (0.3ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 152676259) [0m
+  [4;35;1mFriending Load (1.4ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 41829249) [0m
+  [4;36;1mFriending Load (1.5ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 30914966) [0m
+  [4;35;1mFriending Load (0.3ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 154981178) [0m
+  [4;36;1mFriending Load (1.3ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 35164223) [0m
+  [4;35;1mFriending Load (1.5ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 28223626) [0m
+  [4;36;1mFriending Load (1.5ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 82571239) [0m
+  [4;35;1mFriending Load (1.4ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 153819213) [0m
+  [4;36;1mFriending Load (1.5ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 69830225) [0m
+  [4;35;1mFriending Load (0.3ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 102613248) [0m
+  [4;36;1mFriending Load (1.3ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 183540) [0m
+  [4;35;1mFriending Load (1.8ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 149033164) [0m
+  [4;36;1mFriending Load (1.4ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 139156349) [0m
+  [4;35;1mFriending Load (1.3ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 127851356) [0m
+  [4;36;1mFriending Load (1.4ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 148297258) [0m
+  [4;35;1mFriending Load (0.6ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 6129075) [0m
+  [4;36;1mFriending Load (1.4ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 108054816) [0m
+  [4;35;1mFriending Load (0.3ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 141617628) [0m
+  [4;36;1mFriending Load (1.3ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 164786318) [0m
+  [4;35;1mFriending Load (1.2ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 19843933) [0m
+  [4;36;1mFriending Load (0.3ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 7218180) [0m
+  [4;35;1mFriending Load (1.4ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 7143583) [0m
+  [4;36;1mFriending Load (1.8ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 20466693) [0m
+  [4;35;1mFriending Load (1.6ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 44626288) [0m
+  [4;36;1mFriending Load (0.8ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 5454908) [0m
+  [4;35;1mFriending Load (0.8ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 81885325) [0m
+  [4;36;1mFriending Load (0.7ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 8415075) [0m
+  [4;35;1mFriending Load (0.7ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 6998646) [0m
+  [4;36;1mFriending Load (0.2ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 10895367) [0m
+  [4;35;1mFriending Load (0.1ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 150709489) [0m
+  [4;36;1mFriending Load (0.8ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 104457841) [0m
+  [4;35;1mFriending Load (0.8ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 106468168) [0m
+  [4;36;1mFriending Load (0.8ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 119801455) [0m
+  [4;35;1mFriending Load (0.7ms)[0m   [0mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` = 106692297) [0m
+  [4;36;1mFriending Load (0.2ms)[0m   [0;1mSELECT * FROM `friendings` WHERE (`friendings`.`user_id` = 2 AND `friendings`.`follow_id` IS NULL) [0m
+  [4;35;1mFriending Load (1.2ms)[0m   [0mSELECT * FROM `friendings` WHERE (created_at > '2010-10-17 23:21:18') AND (`friendings`.`user_id` = 2) [0m

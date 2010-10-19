@@ -15,9 +15,9 @@ module TwitterAuth
 
       def request(http_method, path, *arguments)
         path = TwitterAuth.path_prefix + path
-        path = append_extension_to(path)
+#        path = append_extension_to(path)
 
-        puts "path: #{path}"
+        puts "path: #{path} args: #{arguments.to_s}"
 
         response = super
 

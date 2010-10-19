@@ -4,8 +4,9 @@ require 'json'
 module Main
 
   include Util
+  include DateUtils
 
-  def follow_from_list(user, twitter_users)
+  def follow_from_list(user, twitter_users, max=10)
     puts "for user #{user.login}, attempting to follow #{twitter_users.to_yaml}"
 
 
@@ -14,9 +15,13 @@ module Main
     #follow each one of them
     twitter_users.each do |twitter_user|
       begin
+        # check if we have followed too many
+        if just_friended.size >= max
+          break
+        end
+
         # execute the follow
         follow_result = user.twitter.post('/friendships/create','user_id'=>twitter_user)
-#        follow_result = user.twitter.friendship_create(twitter_user)
         just_friended << twitter_user
         puts "just followed #{twitter_user}"
 
@@ -29,7 +34,7 @@ module Main
       rescue => e
         puts "error trying to friend #{twitter_user}"
         puts e.message
-        puts e.backtrace
+#        puts e.backtrace
       end
 
     end
@@ -39,7 +44,7 @@ module Main
 
   def get_users_to_follow(user)
     # get all the users the user is currently following
-    friends = user.twitter.get('/friends/ids')
+    friends = user.twitter.get('/friends/ids.json')
 
     # for each keyword, get a list of users
     search_users = []
@@ -52,7 +57,7 @@ module Main
     users_to_follow = []
     search_users = shuffle_array(search_users)
     i=0
-    while users_to_follow.size < 10 && i < search_users.size # end if we have enough to follow or we run out of users
+    while i < search_users.size # end if we have enough to follow or we run out of users
       i += 1
       search_user = search_users[i]
       #make sure they arent in the list of already followed
@@ -63,19 +68,29 @@ module Main
         users_to_follow << search_user
       end
     end
-    users_to_follow
+    users_to_follow = users_to_follow[0..100]
+
+    # filter out all the spam users
+
+    filtered_users_to_follow = []
+    users_to_follow.each do |id|
+      data = id_to_full_data(user,id)
+      filtered_users_to_follow << data unless !legit_user?(data)
+    end
+
+    filtered_users_to_follow
+
   end
 
-  def should_do_follows(user)
-    friendings = Friending.find_all_by_user_id(user.id,:conditions=>["created_at > ?",Time.now - (60 * 60 * 24)])
-    !friendings.nil? || friendings.size < 100
-
-  end
 
   def do_follows_for_user(user)
     if should_do_follows(user) then
       users_to_follow = get_users_to_follow(user)
-      just_followed = follow_from_list(user, users_to_follow)
+
+      past_friendings_size = past_friendings_one_day(user).size
+      puts "in the past day we have created #{past_friendings_size} friendings"
+      max = 100 - past_friendings_size
+      just_followed = follow_from_list(user, users_to_follow, max)
 
       puts "for user: #{user.login}, just followed #{just_followed.to_yaml}"
     else
@@ -103,6 +118,52 @@ module Main
 
 
   end
+
+
+  def unfollow_from_list(removables, user)
+    removables.each do |removable|
+      begin
+        unfriend_result = user.twitter.post("/friendships/destroy/#{removable.to_s}.json")
+        puts "unfriend result: #{unfriend_result.to_s}"
+      rescue => e
+        put_error(e)
+      end
+    end
+  end
+
+  def do_unfollows(user)
+    #    get the followers list for the user, get all the follows that are at least 3 days old
+    # remove all the people that are following and on the friendings list
+    followers = get_followers(user)
+    puts "followers:\n #{followers.sort.join(', ').to_s}"
+    # get the ones we could possibly remove
+    friendings = Friending.find_all_by_user_id(user.id,:order=>"created_at",:conditions=>["created_at < ?", add_days(Time.now, -3)])
+    puts "friendings followathon has created"
+    friendings_ids = []
+    friendings.each do |friending|
+      friendings_ids << friending.follow_id
+    end
+    puts friendings_ids.sort.join(", ").to_s
+
+    # if we arent actually following them, dont try to unfollow them
+    friendings = remove_no_longer_following(friendings, user)
+
+    # if they are followed us back, remove them from the to-unfollow list
+    removables = remove_following_from_friendings(friendings, followers)
+
+    # we have found all the people that we are going to unfollow, do the unfollows
+    puts "removables: \n#{removables.sort.to_s}"
+
+    unfollow_from_list(removables, user)
+
+
+
+
+  end
+
+
+
+
 
 
 end

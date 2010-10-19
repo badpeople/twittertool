@@ -21,13 +21,16 @@
 			<div id="content-wrap">
 				<div class="content">
 
-                    <table width="100%">
+                    <div class="left"><table width="100%">
                       <tr>
                         <td>
                           <div id="logo">
-                            <%= image_tag "twitter_logo.png",:class => "title-img" %>
-                            <span class="main-title"><%= link_to "FollowATHON",:controller=>"users",:action=>"home" %></span>
+                            <%= image_tag "twitter_logo.png", :class => "title-img" %>
                           </div>
+
+                        </td>
+                        <td>
+                          <span class="main-title"><%= link_to "FollowATHON", :controller=>"users", :action=>"home" %></span>
                         </td>
                         <td class="main-nav-container">
                           <div class="main-nav">
@@ -49,7 +52,7 @@
 
                         </td>
                       </tr>
-                    </table>
+                    </table></div>
 					 <!-- END .main-nav -->
 					 <!-- END #logo -->
 				</div> <!-- END .content -->
@@ -65,7 +68,7 @@
 					</ul>
 				</div> <!-- END #banner -->
 				<div class="content">
-					  <%= yield %>
+					  <div class="left"><%= yield %></div>
 
 				</div> <!-- END .content -->
 			</div> <!-- END #content-wrap -->

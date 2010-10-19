@@ -10,4 +10,14 @@ namespace :follow do
     end
   end
 
+  task :do_unfollows => :environment do
+    include Util
+    include Main
+
+    User.all.each do |user|
+      puts "doing unfollows for #{user.login}"
+      do_unfollows(user)
+    end
+  end
+
 end

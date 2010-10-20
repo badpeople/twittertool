@@ -85,9 +85,9 @@ div#content-wrap                {background: transparent url(../images/wrapper_s
 div.content                     {width: 780px; float: left;padding:0 30px 0 0;margin-left: 21px;}
 div#logo                        {float: left; }
 div#slogan                      {position: absolute; top: 54px; left: 230px;}
-div#banner                      {padding:22px 20px 0 0;background: #0d223a url(../images/banner_bolt.png) scroll 166px 0 no-repeat; float: left; width: 780px; margin-left: 21px; padding-bottom: 10px;}
+div#banner                      {padding:22px 20px 0 0;background: #0d223a scroll 166px 0 no-repeat; float: left; width: 780px; margin-left: 21px; padding-bottom: 10px;}
 div#banner ul                   {float: left;}
-div#banner ul li                {padding:2px 0 7px 20px;background: url(../images/banner_list.png) scroll -1px 5px no-repeat;}
+div#banner ul li                {padding:2px 0 7px 20px;background:  scroll -1px 5px no-repeat;}
 div.content-right               {width: 536px; float: left; padding: 25px 0 0 35px;}
 div.flash-ad                    {width: 490px; height: 130px;}
 
@@ -177,8 +177,8 @@ div.left    {float: left; padding: 0px 0px 0px 12px;}
 
 
 /*@font-face*/
-@font-face      {font-family:"Univers"; src:  url(../fonts/Univers/UniversLTStd-Cn.otf) format("opentype") }
-@font-face      {font-family:'UniversLight'; src: url(../fonts/Univers/UniversLTStd-LightCn.otf) format("opentype"); font-weight: normal; }
+/*@font-face      {font-family:"Univers"; src:  url(../fonts/Univers/UniversLTStd-Cn.otf) format("opentype") }*/
+/*@font-face      {font-family:'UniversLight'; src: url(../fonts/Univers/UniversLTStd-LightCn.otf) format("opentype"); font-weight: normal; }*/
 
 
 /*Global*/

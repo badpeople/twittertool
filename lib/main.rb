@@ -47,23 +47,21 @@ module Main
     friends = user.twitter.get('/friends/ids.json')
 
     # for each keyword, get a list of users
-    search_users = []
+    tweets = []
     user.keywords.each do|keyword|
-      users_from_keyword_search(keyword.word).each do |user_to_follow|
-        search_users << user_to_follow
+      search_updates(keyword.word).each do |tweet|
+        tweets << tweet
       end
     end
 
     users_to_follow = []
-    search_users = shuffle_array(search_users)
-    i=0
-    while i < search_users.size # end if we have enough to follow or we run out of users
-      i += 1
-      search_user = search_users[i]
+    tweets = shuffle_array(tweets)
+   tweets.each do |tweet|
+      search_user = tweet["from_user_id"]
       #make sure they arent in the list of already followed
       # make sure they arent already in the current seach list,
       # last make sure we havent tried to friend them before
-      if !friends.include?(search_user) && !users_to_follow.include?(search_user) && !already_attempted_friending?(user, search_user)
+      if !friends.include?(search_user) && !users_to_follow.include?(search_user) && !already_attempted_friending?(user, search_user) && legit_user?(tweet)
         # add to list
         users_to_follow << search_user
       end
@@ -72,18 +70,19 @@ module Main
 
     # filter out all the spam users
 
-    filtered_users_to_follow = []
-    users_to_follow.each do |id|
-      data = id_to_full_data(user,id)
-      filtered_users_to_follow << id unless !legit_user?(data)
-    end
-
-    filtered_users_to_follow
+#    filtered_users_to_follow = []
+#    users_to_follow.each do |id|
+#      data = id_to_full_data(user,id)
+#      filtered_users_to_follow << id unless !legit_user?(data)
+#    end
+#
+#    filtered_users_to_follow
 
   end
 
 
   def do_follows_for_user(user)
+    puts "doing follows for #{user.login}"
     if should_do_follows(user) then
       users_to_follow = get_users_to_follow(user)
 

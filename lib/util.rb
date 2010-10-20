@@ -25,9 +25,11 @@ module Util
     # You should choose better exception.
     raise ArgumentError, 'HTTP redirect too deep' if limit == 0
 
-    puts "fetching: #{uri_str}"
+    print "fetching: #{uri_str}"
 
     response = Net::HTTP.get_response(URI.parse(uri_str))
+    print "rate limit remaining: #{response.header['x-ratelimit-remaining']}\n"
+
     case response
       when Net::HTTPSuccess then
         response
@@ -165,7 +167,7 @@ module Util
     begin
       return false unless !data.nil?
       return false unless !data['profile_image_url'].include?('default')
-      return false unless data['followers_count'] > 5
+#      return false unless data['followers_count'] > 5
       return true
     rescue => e
       put_error e

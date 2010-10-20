@@ -17,9 +17,11 @@ module TwitterAuth
         path = TwitterAuth.path_prefix + path
 #        path = append_extension_to(path)
 
-        puts "path: #{path} args: #{arguments.to_s}"
+        print "path: #{path} args: #{arguments.to_s}"
 
         response = super
+
+        print "rate limit remaining: \t#{response.header['x-ratelimit-remaining']}\n"
 
         handle_response(response)
       end

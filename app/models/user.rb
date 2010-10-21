@@ -4,5 +4,6 @@ class User < TwitterAuth::GenericUser
   # parent TwitterAuth::GenericUser class.
   has_and_belongs_to_many :keywords
   has_many :friendings
+  has_many :tweets
 
 end

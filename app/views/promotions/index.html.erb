@@ -1,0 +1,21 @@
+<h1>Listing promotions</h1>
+
+<table cellpadding="1" border="1">
+  <tr>
+  </tr>
+
+<% @promotions.each do |promotion| %>
+  <tr>
+    <td><%= promotion.id %></td>
+    <td><%= promotion.status_id %></td>
+    <td><%= promotion.text %></td>
+    <td><%= link_to 'Show', promotion %></td>
+    <td><%= link_to 'Edit', edit_promotion_path(promotion) %></td>
+    <td><%= link_to 'Destroy', promotion, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New promotion', new_promotion_path %>

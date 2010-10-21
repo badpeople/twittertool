@@ -175,5 +175,9 @@ module Util
     end
   end
 
+  def is_retweet?(promotion)
+    !promotion.status_id.nil? && promotion.status_id.to_s.size > 4
+  end
+
 
 end

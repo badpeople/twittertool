@@ -1,0 +1,7 @@
+<% form_for @promotion do |f| %>
+    Text:<%= f.text_field :text,:size=>140 %>    <br/>
+    Status ID: <%= f.text_field :status_id %>    <br/>
+    Active: <%= f.check_box :active %>    <br/>
+  <%= f.submit "Add" %>
+<% end %>
+

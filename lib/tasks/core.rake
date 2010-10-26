@@ -8,6 +8,12 @@ namespace :follow do
       do_follows_for_user user
 
     end
+
+    User.all.each do |user|
+      puts "doing unfollows for #{user.login}"
+      do_unfollows(user)
+    end
+
   end
 
   task :do_unfollows => :environment do

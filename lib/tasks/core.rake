@@ -36,10 +36,15 @@ namespace :follow do
 
   task :do_tweets =>:environment do
     include Main
+    include Util
 
     User.all.each do |user|
-      puts "doing tweets for #{user.login}"
-      do_tweet(user)
+      begin
+        puts "doing tweets for #{user.login}"
+        do_tweet(user)
+      rescue =>e
+        put_error(e)
+      end
     end
   end
 

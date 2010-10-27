@@ -26,4 +26,21 @@ namespace :follow do
     end
   end
 
+  task :do_deletes =>:environment do
+    include Main
+
+    User.all.each do |user|
+      do_deletes(user)
+    end
+  end
+
+  task :do_tweets =>:environment do
+    include Main
+
+    User.all.each do |user|
+      puts "doing tweets for #{user.login}"
+      do_tweet(user)
+    end
+  end
+
 end

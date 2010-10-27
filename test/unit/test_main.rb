@@ -6,10 +6,10 @@ class MainTester < Test::Unit::TestCase
   include Util
 
   def test_do_follow
-    User.all.each do |user|
-      do_follows_for_user user
+#    User.all.each do |user|
+      do_follows_for_user User.find_by_login('paultweettest2')
 
-    end
+#    end
   end
 
   def test_should_run
@@ -49,6 +49,12 @@ class MainTester < Test::Unit::TestCase
     unfollow_from_list(to_unfollow, user)
 
 
+
+  end
+
+  def test_do_deletes
+    user = User.find_by_login('paultweettest2')
+    do_deletes(user)
 
   end
 

@@ -1,9 +1,11 @@
 require 'test_helper'
+require 'main'
 
 
 class TweetTester < Test::Unit::TestCase
-  include Util
-  include Tweetutil
+  include Main
+#  include Util
+#  include Tweetutil
 
   def test_tweet
     user = User.find_by_login('paultweettest2')
@@ -29,6 +31,13 @@ class TweetTester < Test::Unit::TestCase
     user = User.find_by_login('paultweettest2')
     _tweet = retweet_for_user(user)
 
+
+
+  end
+
+  def test_do_tweet
+    user = User.find_by_login('toosoondude')
+    do_tweet(user)
 
   end
 

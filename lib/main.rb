@@ -1,10 +1,12 @@
 require 'rand'
 require 'json'
+require 'tweetutil'
 
 module Main
 
   include Util
   include DateUtils
+  include Tweetutil
 
   def follow_from_list(user, twitter_users, max=10)
     puts "for user #{user.login}, attempting to follow #{twitter_users.to_yaml}"
@@ -160,9 +162,61 @@ module Main
 
   end
 
+  def do_tweet(user)
+    # delete all the old ones
+    do_deletes(user)
+
+    # checl for something we have rewtweeted or needs to be retweeted
+    _tweet = tweet_or_retweet(user)
+
+    if _tweet.nil?
+      # there is nothing that we need to tweet or retweet, do the default
+      _tweet = default_tweet(user)
+      if !_tweet.nil?
+        _tweet = Tweet.new(:promotion=>nil, :user=>user,:tweet_id=>_tweet['id'],:deleted=>false)
+        _tweet.user = user
+        _tweet.save
+      end
+
+    end
+
+    if !_tweet.nil?
+      puts "For #{user.login}, we tweeted http://twitter.com/#{user.login}/statuses/#{_tweet.tweet_id}"
+    end
+  end
+
+
+  def do_deletes(user)
+    puts "doing deletes for #{user.login}"
+
+    # get all the tweets created by this twitter app, remove them
+    user_timeline = user.twitter.get("/statuses/user_timeline.json")
+    user_timeline.each do |user_tweet|
+      if !user_tweet['source'].nil? && user_tweet['source'].include?(APP_CONFIG[:app_name])
+
+        begin
+          user.twitter.post("/statuses/destroy/#{user_tweet['id']}.json")
+          #find it in our db, mark it deleted
+          _tweet = Tweet.find_by_tweet_id(user_tweet['id'])
+          if !_tweet.nil?
+            _tweet.update_attribute(:deleted,true)
+          end
+        rescue => e
+          puts e
+        end
+      end
+    end
+
+    all_non_deleted_tweets = non_deleted_tweets(user, 1,true)
+    non_deleted_tweets(user, days_ago=1,has_promotion=false).each { |non_deleted_tweet| all_non_deleted_tweets << non_deleted_tweet}
+    all_non_deleted_tweets.each do |non_deleted_tweet|
+      puts "found this non-deleted default tweet #{non_deleted_tweet.to_yaml}"
+      delete_tweet(non_deleted_tweet,user)
+      non_deleted_tweet.update_attributes({:deleted=>true})
+    end
 
 
 
-
+  end
 
 end

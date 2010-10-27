@@ -70,7 +70,7 @@ class UtilTester < Test::Unit::TestCase
   end
 
   def test_legit_user
-    data = {'profile_image_url'=>'http://s.twimg.com/a/1287010001/images/default_profile_1_bigger.png','followers_count'=>20}
+    data = {'profile_image_url'=>'http://s.twimg.com/a/1287010001/images/default_profile_0_bigger.png','followers_count'=>20}
     assert !legit_user?(data)
 #    data = {'profile_image_url'=>'the/sweet_one','followers_count'=>0}
 #    assert !legit_user?(data)

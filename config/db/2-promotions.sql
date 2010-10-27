@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 21, 2010 at 12:08 AM
+-- Generation Time: Oct 27, 2010 at 12:22 AM
 -- Server version: 5.1.41
 -- PHP Version: 5.3.2-1ubuntu4.5
 
@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `promotions` (
   `text` varchar(255) DEFAULT NULL,
   `active` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 -- --------------------------------------------------------
 
@@ -40,6 +40,6 @@ CREATE TABLE IF NOT EXISTS `tweets` (
   `created_at` datetime NOT NULL,
   `deleted` tinyint(1) NOT NULL,
   `tweet_id` bigint(20) NOT NULL,
-  `promotion_id` int(11) NOT NULL,
+  `promotion_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=42 ;

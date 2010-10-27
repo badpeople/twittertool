@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   include Util
-  include Main
 
   before_filter :logged_in,:only=>[:tweets,:follow_test,:home]
   def tweets

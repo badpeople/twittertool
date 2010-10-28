@@ -1,0 +1,18 @@
+<% title "Users you are similar to" %>
+
+<table>
+  <% for mimic in @mimics %>
+      <tr>
+        <td><%= mimic.twitter_username %></td><td><%= link_to "Remove", mimic, :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+  <% end %>
+</table>
+
+
+
+<%- flash.each do |name, msg| -%>
+    <%= content_tag :div, msg, :id => "flash_#{name}" %>
+<%- end -%>
+<%= render :partial => 'form' %>
+
+

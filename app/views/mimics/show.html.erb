@@ -1,0 +1,12 @@
+<% title "Mimic" %>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @mimic.name %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_mimic_path(@mimic) %> |
+  <%= link_to "Destroy", @mimic, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", mimics_path %>
+</p>

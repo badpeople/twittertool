@@ -44,9 +44,21 @@ module Main
     just_friended
   end
 
+
+
   def get_users_to_follow(user)
+
+    users_to_follow = []
     # get all the users the user is currently following
-    friends = user.twitter.get('/friends/ids.json')
+    friends = get_friends(user)
+
+    # add all the users in the db
+    User.all.each do |db_user|
+      db_user_twitter_id = db_user.twitter_id.to_i
+      if !friends.include?(db_user_twitter_id) &&  !already_attempted_friending?(user, db_user_twitter_id) && db_user_twitter_id != user.twitter_id.to_i
+        users_to_follow << db_user_twitter_id
+      end
+    end
 
     # for each keyword, get a list of users
     tweets = []
@@ -56,9 +68,11 @@ module Main
       end
     end
 
-    users_to_follow = []
+    # get all from mimic
+    from_mimic = get_potential_follows_from_mimic(user)
+
     tweets = shuffle_array(tweets)
-   tweets.each do |tweet|
+    tweets.each do |tweet|
       search_user = tweet["from_user_id"]
       #make sure they arent in the list of already followed
       # make sure they arent already in the current seach list,
@@ -66,9 +80,30 @@ module Main
       if !friends.include?(search_user) && !users_to_follow.include?(search_user) && !already_attempted_friending?(user, search_user) && legit_user?(tweet)
         # add to list
         users_to_follow << search_user
+
+        from_mimic.each do |mimic_list|
+          id_from_mimic = mimic_list.delete_at(rand(mimic_list.size))
+          if !friends.include?(id_from_mimic) && !users_to_follow.include?(id_from_mimic) && !already_attempted_friending?(user, id_from_mimic)
+            users_to_follow << id_from_mimic
+          end
+        end
+      end
+
+      if users_to_follow.size > 100
+        break
       end
     end
-    users_to_follow = users_to_follow[0..100]
+
+    from_mimic.each do |mimic_list|
+      if users_to_follow.size > 100
+        break
+      end
+
+      users_to_follow << mimic_list.delete_at(rand(mimic_list.size))
+    end
+
+
+    users_to_follow[0..100]
 
     # filter out all the spam users
 
@@ -219,7 +254,16 @@ module Main
 
   end
 
-  def follow_people_back(user)
+  # returns a list of lists of ids, one list for each mimic
+  def get_potential_follows_from_mimic(user)
+    # iterate over the mimics in the table
+    follow_lists = []
+    user.mimics.each do |mimic|
+      follow_lists << get_followers(user, mimic.twitter_id)
+    end
+
+#    puts follow_lists.to_yaml
+    follow_lists
 
   end
 

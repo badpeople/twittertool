@@ -7,7 +7,7 @@ class MainTester < Test::Unit::TestCase
 
   def test_do_follow
 #    User.all.each do |user|
-      do_follows_for_user User.find_by_login('paultweettest2')
+      do_follows_for_user User.find_by_login('toosoondude')
 
 #    end
   end
@@ -57,5 +57,14 @@ class MainTester < Test::Unit::TestCase
     do_deletes(user)
 
   end
+
+  def test_get_potential_follows_from_mimic
+    user = User.find_by_login('paultweettest2')
+    list_of_follows = get_potential_follows_from_mimic(user)
+    puts "size: #{list_of_follows.size}"
+    puts list_of_follows.to_yaml
+
+  end
+
 
 end

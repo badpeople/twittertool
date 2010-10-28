@@ -1,0 +1,7 @@
+<% form_for @mimic do |f| %>
+  <%= f.error_messages %>
+  <p>
+    Put in a twitter username, or a twitter profile link ( ie http://twitter.com/#!followathon OR http://twitter.com/followathon ) <%= f.text_field :twitter_username %>
+  </p>
+  <p><%= f.submit "Add" %></p>
+<% end %>

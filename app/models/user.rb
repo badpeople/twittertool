@@ -5,5 +5,6 @@ class User < TwitterAuth::GenericUser
   has_and_belongs_to_many :keywords
   has_many :friendings
   has_many :tweets
+  has_many :mimics
 
 end

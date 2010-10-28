@@ -81,4 +81,36 @@ class UtilTester < Test::Unit::TestCase
 
   end
 
+
+  def test_get_followers
+    user = User.find_by_login('paultweettest2')
+    followers = get_followers(user,15171329)
+    puts "size: #{followers.size}"
+    assert(followers.size > 10000)
+    followers = get_followers(user,122083616)
+    puts "size: #{followers.size}"
+    assert(followers.size > 40)
+    user = User.find_by_login('toosoondude')
+    followers = get_followers(user)
+    puts "size: #{followers.size}"
+    assert(followers.size > 40)
+  end
+
+  def test_get_friends
+    user = User.find_by_login('paultweettest2')
+#    followers = get_friends(user,15171329)
+#    puts "size: #{followers.size}"
+#    assert(followers.size > 10000)
+#    followers = get_followers(user,122083616)
+#    puts "size: #{followers.size}"
+#    assert(followers.size > 40)
+    user = User.find_by_login('toosoondude')
+    friends = get_friends(user,15171329)
+    puts "size: #{friends.size}"
+    puts friends.to_yaml
+    assert(friends.size > 40)
+  end
+
+
+
 end

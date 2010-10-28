@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :mimics
+
   map.resources :promotions
 
   map.resources :keywords

@@ -49,19 +49,24 @@ module Util
     Friending.find(:all,:conditions=>{:user_id=>user.id,:follow_id=>to_follow}).size > 0
   end
 
-  def get_followers(user, cursor="-1")
-    followers = user.twitter.get("/followers/ids.json",'cursor'=>cursor)
-#    followers_json = user.twitter.get("/followers/ids/#{user.login}.json",'cursor'=>cursor)
-#    followers_obj = JSON.parse(followers_json)
-#    followers = followers_obj[:ids].nil? ? [] : followers_obj[:ids]
-    followers = [] unless !followers.nil?
+  def get_followers(user,user_id=nil,cursor=nil,curr_size=nil)
+    if !curr_size.nil? && curr_size > 20000
+      return []
+    end
+    curr_size ||= 0
+    cursor ||= "-1"
+    followers_obj = user.twitter.get("/followers/ids.json?cursor=#{cursor}" + (user_id.nil? ? "" : "&user_id=#{user_id.to_s}"))
 
-#    if !followers_obj[:next_cursor_str].nil? && followers_obj[:next_cursor_str] != 0
-#      get_followers(user, followers_obj[:next_cursor_str]).each do |follower|
-#        followers << follower
-#      end
-#
-#    end
+    if followers_obj['ids'].nil? # there are less than 5000 ids, just return
+      return followers_obj
+    end
+
+    followers = followers_obj['ids']
+    if !followers_obj['next_cursor_str'].nil? && followers_obj['next_cursor_str'] != "0"
+      get_followers(user,user_id, followers_obj['next_cursor_str'],followers.size).each do |follower|
+        followers << follower
+      end
+    end
 
     followers
 
@@ -177,6 +182,29 @@ module Util
 
   def is_retweet?(promotion)
     !promotion.status_id.nil? && promotion.status_id.to_s.size > 4
+  end
+
+  def get_friends(user,user_id=nil,cursor=nil,curr_size=nil)
+    if !curr_size.nil? && curr_size > 20000
+      return []
+    end
+    curr_size ||= 0
+    cursor ||= "-1"
+    friends_obj = user.twitter.get("/friends/ids.json?cursor=#{cursor}" + (user_id.nil? ? "" : "&user_id=#{user_id.to_s}"))
+
+    if friends_obj['ids'].nil? # there are less than 5000 ids, just return
+      return friends_obj
+    end
+
+    friends = friends_obj['ids']
+    if !friends_obj['next_cursor_str'].nil? && friends_obj['next_cursor_str'] != "0"
+      get_followers(user,user_id, friends_obj['next_cursor_str'],friends.size).each do |friend|
+        friends << friend
+      end
+    end
+
+    friends
+
   end
 
 

@@ -144,7 +144,7 @@ module Main
     friendings.each do |friending|
       friendings_ids << friending.follow_id
     end
-    puts friendings_ids.sort.join(", ").to_s
+    puts friendings_ids.size.to_s
 
     # if we arent actually following them, dont try to unfollow them
     friendings = remove_no_longer_following(friendings, user)
@@ -153,7 +153,7 @@ module Main
     removables = remove_following_from_friendings(friendings, followers)
 
     # we have found all the people that we are going to unfollow, do the unfollows
-    puts "removables: \n#{removables.sort.to_s}"
+    puts "removables (#{removables.size}): \n#{removables.sort.join(", ").to_s}"
 
     unfollow_from_list(removables, user)
 
@@ -216,6 +216,10 @@ module Main
     end
 
 
+
+  end
+
+  def follow_people_back(user)
 
   end
 

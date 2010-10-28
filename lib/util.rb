@@ -84,7 +84,7 @@ module Util
   def remove_no_longer_following(friendings, user,cursor=-1)
     # get all the people this user is following
     friends = user.twitter.get("/friends/ids.json",'cursor'=>cursor.to_s)
-    puts "people #{user.login} is following\n#{friends.sort.join(', ').to_s}"
+    puts "people #{user.login} is following\n#{friends.size()}"
 
     friends = friends.to_set
 

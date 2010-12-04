@@ -53,7 +53,7 @@ module Main
     friends = get_friends(user)
 
     # add all the users in the db
-    User.all.each do |db_user|
+    User.all_enabled.each do |db_user|
       db_user_twitter_id = db_user.twitter_id.to_i
       if !friends.include?(db_user_twitter_id) &&  !already_attempted_friending?(user, db_user_twitter_id) && db_user_twitter_id != user.twitter_id.to_i
         users_to_follow << db_user_twitter_id

@@ -12,4 +12,14 @@ class ApplicationController < ActionController::Base
   def logged_in
     redirect_to "/" unless !current_user.nil?
   end
+
+  def is_admin
+    config_token  = APP_CONFIG[:auth_token]
+    session_token = session[:auth_token]
+    if !(session_token == config_token)
+      redirect_to "/"
+    end
+
+  end
+
 end

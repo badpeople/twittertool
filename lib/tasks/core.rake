@@ -3,13 +3,13 @@ namespace :follow do
     include Util
     include Main
 
-    User.all.each do |user|
+    User.all_enabled.each do |user|
       puts "doing follows for #{user.login}"
       do_follows_for_user user
 
     end
 
-    User.all.each do |user|
+    User.all_enabled.each do |user|
       puts "doing unfollows for #{user.login}"
       do_unfollows(user)
     end
@@ -20,7 +20,7 @@ namespace :follow do
     include Util
     include Main
 
-    User.all.each do |user|
+    User.all_enabled.each do |user|
       puts "doing unfollows for #{user.login}"
       do_unfollows(user)
     end
@@ -29,7 +29,8 @@ namespace :follow do
   task :do_deletes =>:environment do
     include Main
 
-    User.all.each do |user|
+    User.all_enabled.each do |user|
+      puts "doing deletes for #{user.login}"
       do_deletes(user)
     end
   end
@@ -38,7 +39,7 @@ namespace :follow do
     include Main
     include Util
 
-    User.all.each do |user|
+    User.all_enabled.each do |user|
       begin
         puts "doing tweets for #{user.login}"
         do_tweet(user)

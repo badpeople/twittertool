@@ -253,10 +253,10 @@ div#banner h2,
 div#banner ul li a  {text-shadow: 1px 1px 1px #010E34}
 
 span.main-title > a{
-    font-size: 4.0em;
+    font-size: 6.0em;
     text-decoration:none;
     vertical-align:top;
-    padding: 10px 80px;
+    padding: 10px 40px;
     color: #375fa9;
     font-weight:bold;
     font-family: "UniversLight, Univers, arial";
@@ -324,4 +324,10 @@ span.main-title > a{
 {
     float:right;
     font-size: 0.8em;
+}
+
+#enable-users > tbody > tr>td
+{
+    padding-right: 5px;
+
 }

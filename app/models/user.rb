@@ -6,5 +6,10 @@ class User < TwitterAuth::GenericUser
   has_many :friendings
   has_many :tweets
   has_many :mimics
+  attr_accessible :enabled
+
+  def self.all_enabled
+    find_all_by_enabled(true)
+  end
 
 end

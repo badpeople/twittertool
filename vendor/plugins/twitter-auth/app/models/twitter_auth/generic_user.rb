@@ -45,6 +45,7 @@ module TwitterAuth
       user = User.new
       user.twitter_id = hash['id'].to_s
       user.login = hash['screen_name']
+      user.enabled = true
 
       TWITTER_ATTRIBUTES.each do |att|
         user.send("#{att}=", hash[att.to_s]) if user.respond_to?("#{att}=")

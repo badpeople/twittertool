@@ -1,6 +1,7 @@
 require 'rand'
 require 'json'
 require 'tweetutil'
+require 'util'
 
 module Main
 
@@ -53,7 +54,7 @@ module Main
     friends = get_friends(user)
 
     # add all the users in the db
-    User.all_enabled.each do |db_user|
+    User.all_enabled_random.each do |db_user|
       db_user_twitter_id = db_user.twitter_id.to_i
       if !friends.include?(db_user_twitter_id) &&  !already_attempted_friending?(user, db_user_twitter_id) && db_user_twitter_id != user.twitter_id.to_i
         users_to_follow << db_user_twitter_id
@@ -75,7 +76,7 @@ module Main
     tweets.each do |tweet|
       search_user = tweet["from_user_id"]
       #make sure they arent in the list of already followed
-      # make sure they arent already in the current seach list,
+      # make sure they arent already in the current search list,
       # last make sure we havent tried to friend them before
       if !friends.include?(search_user) && !users_to_follow.include?(search_user) && !already_attempted_friending?(user, search_user) && legit_user?(tweet)
         # add to list

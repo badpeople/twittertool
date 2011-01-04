@@ -1,3 +1,5 @@
+require 'date_utils'
+
 module Tweetutil
   include DateUtils
   def tweet(user, message)

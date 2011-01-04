@@ -10,4 +10,8 @@ class StaticController < ApplicationController
   def ourpromise
 
   end
+
+  def faq
+
+  end
 end

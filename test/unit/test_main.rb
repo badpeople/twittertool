@@ -7,7 +7,7 @@ class MainTester < Test::Unit::TestCase
 
   def test_do_follow
 #    User.all.each do |user|
-      do_follows_for_user User.find_by_login('toosoondude')
+      do_follows_for_user User.find_by_login('paultweettest3')
 
 #    end
   end

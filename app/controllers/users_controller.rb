@@ -1,15 +1,11 @@
+require 'util'
+
 class UsersController < ApplicationController
   include Util
 
-  before_filter :logged_in,:only=>[:tweets,:follow_test,:home]
+  before_filter :logged_in,:only=>[:tweets,:follow_test,:home,:destroy]
   def tweets
     @tweets = current_user.twitter.get('/statuses/friends_timeline')
-  end
-
-
-  def follow_test
-    follow(current_user)
-
   end
 
   def index
@@ -36,7 +32,11 @@ class UsersController < ApplicationController
 
   end
 
-
+  def destroy
+    current_user.update_attributes(:enabled=>false)
+    flash[:notice] = "Successfully unsubscribed."
+#    redirect_to "/logout",:flash=>{:notice=>"Successfully unsubscribed."}
+  end
 
 
 

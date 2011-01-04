@@ -1,3 +1,6 @@
+require 'util'
+require 'main'
+
 namespace :follow do
   task :do_all => :environment do
     include Util

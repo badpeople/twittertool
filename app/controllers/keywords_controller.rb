@@ -71,4 +71,15 @@ class KeywordsController < ApplicationController
     flash[:notice] = "Successfully destroyed keyword."
     redirect_to keywords_url
   end
+
+  def search
+    keyword_partial = params[:keyword]
+#    @headers["Content-Type"] = "text/plain; charset=utf-8"
+    keywords = []
+    Keyword.find(:all,:select=>"word",:conditions=>["word LIKE ?", "%" + keyword_partial + "%"]).each do |keyword|
+      keywords << keyword.word
+    end
+
+    render :text=>keywords.to_json
+  end
 end

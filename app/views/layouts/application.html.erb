@@ -7,7 +7,9 @@
 		<meta http-equiv="content-Language" content="en-us" />
 		<meta http-equiv="imagetoolbar" content="false" />
 		<meta name="revisit-after" content="3 days" />
-		<meta name="robots" content="all" />
+		<meta name="robots" content="all"/>
+      <%= javascript_include_tag :defaults %>
+      <%= csrf_meta_tag %>
         <%= stylesheet_link_tag 'application' %>
 
 
@@ -53,14 +55,20 @@
 						<ul>
 
 							<% if logged_in? then %>
+                              <% if !current_user.enabled? %>
+                                  <li><span class="disabled-text">DISABLED</span></li>
+
+                              <% end %>
                               <li><%= link_to "Logout",:controller=>"sessions",:action=>"destroy" %></li>
                               <li><%= link_to "My Keywords",:controller=>"keywords" %></li>
                               <li><%= link_to "My Stats",:controller=>"users",:action => "stats" %></li>
+
                              <% else %>
                               <li><%= link_to "Login / Signup","/login" %></li>
 
 							<% end %>
                           <li><%= link_to "Contact Us",:controller=>"static",:action=>"contact" %></li>
+                          <li><%= link_to "FAQ",:controller=>"static",:action=>"faq" %></li>
 
 
 						</ul>
@@ -84,7 +92,11 @@
 					</ul>
 				</div> <!-- END #banner -->
 				<div class="content">
-					  <div class="left"><%= yield %></div>
+					  <div class="left">
+                        <%- flash.each do |name, msg| -%>
+                            <%= content_tag :div, msg, :id => "flash_#{name}" %>
+                        <%- end -%>
+                        <%= yield %></div>
 
 				</div> <!-- END .content -->
 			</div> <!-- END #content-wrap -->

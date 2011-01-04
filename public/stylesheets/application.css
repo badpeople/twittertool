@@ -331,3 +331,9 @@ span.main-title > a{
     padding-right: 5px;
 
 }
+
+.disabled-text
+{
+    color:red;
+    font-weight:bold;
+}

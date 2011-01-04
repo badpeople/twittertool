@@ -12,4 +12,8 @@ class User < TwitterAuth::GenericUser
     find_all_by_enabled(true)
   end
 
+  def self.all_enabled_random
+    find_all_by_enabled(true,:order=>"RAND()",:limit=>100)
+  end
+
 end

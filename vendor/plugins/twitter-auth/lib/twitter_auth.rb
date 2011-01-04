@@ -1,7 +1,7 @@
 module TwitterAuth
   class Error < StandardError; end
 
-  def self.config(environment=RAILS_ENV)
+  def self.config(environment=Rails.env)
     @config ||= {}
     @config[environment] ||= YAML.load(File.open('/usr/local/twittertool/conf/twitter_auth.yml').read)[environment]
   end

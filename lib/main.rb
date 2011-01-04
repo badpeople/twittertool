@@ -64,8 +64,12 @@ module Main
     # for each keyword, get a list of users
     tweets = []
     user.keywords.each do|keyword|
-      search_updates(keyword.word).each do |tweet|
-        tweets << tweet
+      begin
+        search_updates(keyword.word).each do |tweet|
+          tweets << tweet
+        end
+      rescue => e
+        puts e.message
       end
     end
 

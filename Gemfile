@@ -16,7 +16,7 @@ gem 'rack'
 gem 'ezcrypto'
 gem 'oauth'
 gem 'test-unit'
-
+gem 'thin'
 
 # Use unicorn as the web server
 # gem 'unicorn'

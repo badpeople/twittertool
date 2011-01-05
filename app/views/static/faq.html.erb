@@ -1,3 +1,10 @@
-<p class="main-text">How do I unsubscribe or cancel followathon?</p>
-<p class="subtitle">It's simple.  Click this link below and we will remove you from our system.<br/><br/>
+<p class="subtitle">How do I unsubscribe or cancel followathon?</p>
+<p class="main-text">It's simple.  Click this link below and we will remove you from our system.<br/><br/>
   <%= link_to "Unsubscribe",  {:controller=>"users" ,:action=>"destroy"}, :confirm => 'Are you sure?'%></p>
+
+
+<p class="subtitle">Why is my following count going up?</p>
+<p class="main-text">We follow users that we think will want to follow you back.  This will increase the number of people you are following.<br/><br/>
+
+<p class="subtitle">How do I contact someone?</p>
+<p class="main-text"><%= link_to "Go Here", contact_url %><br/><br/>

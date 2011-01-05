@@ -5,7 +5,7 @@ Twittertool::Application.routes.draw do
   match '/register' => "users#register",:as=>"register"
   match '/tweets' => "users#tweets",:as=>"tweets"
 
-  match '/contact' =>"static#contact"
+  match '/contact' =>"static#contact",:as=>"contact"
   match '/unsubscribe' =>"users#destroy"
 
   resources :mimics

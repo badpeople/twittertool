@@ -135,4 +135,14 @@ module Tweetutil
 
     non_deleted_tweets
   end
+
+  def still_authorized(user)
+    begin
+      user_favs = user.twitter.get("/favorites.json")
+      return !user_favs.nil?
+    rescue => e
+      return false
+    end
+    
+  end
 end

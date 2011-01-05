@@ -20,7 +20,7 @@ module TwitterAuth
             response.body
           end
         when Net::HTTPUnauthorized
-          puts "body: #{response.body}"
+          Rails.logger.info "body: #{response.body}"
           raise TwitterAuth::Dispatcher::Unauthorized, 'The credentials provided did not authorize the user.'
         else
           message = begin

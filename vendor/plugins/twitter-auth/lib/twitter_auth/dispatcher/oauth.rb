@@ -17,11 +17,11 @@ module TwitterAuth
         path = TwitterAuth.path_prefix + path
 #        path = append_extension_to(path)
 
-        print "path: #{path} args: #{arguments.to_s}"
+        Rails.logger.debug "path: #{path} args: #{arguments.to_s}"
 
         response = super
 
-        print "rate limit remaining: \t#{response.header['x-ratelimit-remaining']}\n"
+        Rails.logger.debug "rate limit remaining: \t#{response.header['x-ratelimit-remaining']}\n" if !response.header['x-ratelimit-remaining'].nil?
 
         handle_response(response)
       end

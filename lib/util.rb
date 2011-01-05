@@ -50,25 +50,30 @@ module Util
   end
 
   def get_followers(user,user_id=nil,cursor=nil,curr_size=nil)
-    if !curr_size.nil? && curr_size > 20000
+    begin
+      if !curr_size.nil? && curr_size > 20000
+        return []
+      end
+      curr_size     ||= 0
+      cursor        ||= "-1"
+      followers_obj = user.twitter.get("/followers/ids.json?cursor=#{cursor}" + (user_id.nil? ? "" : "&user_id=#{user_id.to_s}"))
+
+      if followers_obj['ids'].nil? # there are less than 5000 ids, just return
+        return followers_obj
+      end
+
+      followers = followers_obj['ids']
+      if !followers_obj['next_cursor_str'].nil? && followers_obj['next_cursor_str'] != "0"
+        get_followers(user, user_id, followers_obj['next_cursor_str'], followers.size).each do |follower|
+          followers << follower
+        end
+      end
+
+      return followers
+    rescue => e
+      Rails.logger.error e.message
       return []
     end
-    curr_size ||= 0
-    cursor ||= "-1"
-    followers_obj = user.twitter.get("/followers/ids.json?cursor=#{cursor}" + (user_id.nil? ? "" : "&user_id=#{user_id.to_s}"))
-
-    if followers_obj['ids'].nil? # there are less than 5000 ids, just return
-      return followers_obj
-    end
-
-    followers = followers_obj['ids']
-    if !followers_obj['next_cursor_str'].nil? && followers_obj['next_cursor_str'] != "0"
-      get_followers(user,user_id, followers_obj['next_cursor_str'],followers.size).each do |follower|
-        followers << follower
-      end
-    end
-
-    followers
 
   end
 
@@ -88,19 +93,23 @@ module Util
 #  to be used for
   def remove_no_longer_following(friendings, user,cursor=-1)
     # get all the people this user is following
-    friends = user.twitter.get("/friends/ids.json",'cursor'=>cursor.to_s)
-    puts "people #{user.login} is following\n#{friends.size()}"
+    begin
+      friends = user.twitter.get("/friends/ids.json", 'cursor'=>cursor.to_s)
+      puts "people #{user.login} is following\n#{friends.size()}"
 
-    friends = friends.to_set
+      friends        = friends.to_set
 
-    ret_friendings = []
-    friendings.each do |friending|
-      if friends.include?(friending.follow_id)
-        ret_friendings << friending
+      ret_friendings = []
+      friendings.each do |friending|
+        if friends.include?(friending.follow_id)
+          ret_friendings << friending
+        end
       end
-    end
 
-    ret_friendings
+      ret_friendings
+    rescue => e
+      Rails.logger.error e.message
+    end
 
   end
 
@@ -185,25 +194,30 @@ module Util
   end
 
   def get_friends(user,user_id=nil,cursor=nil,curr_size=nil)
-    if !curr_size.nil? && curr_size > 20000
+    begin
+      if !curr_size.nil? && curr_size > 20000
+        return []
+      end
+      curr_size   ||= 0
+      cursor      ||= "-1"
+      friends_obj = user.twitter.get("/friends/ids.json?cursor=#{cursor}" + (user_id.nil? ? "" : "&user_id=#{user_id.to_s}"))
+
+      if friends_obj['ids'].nil? # there are less than 5000 ids, just return
+        return friends_obj
+      end
+
+      friends = friends_obj['ids']
+      if !friends_obj['next_cursor_str'].nil? && friends_obj['next_cursor_str'] != "0"
+        get_followers(user, user_id, friends_obj['next_cursor_str'], friends.size).each do |friend|
+          friends << friend
+        end
+      end
+
+      return friends
+    rescue => e
+      Rails.logger.error e.message
       return []
     end
-    curr_size ||= 0
-    cursor ||= "-1"
-    friends_obj = user.twitter.get("/friends/ids.json?cursor=#{cursor}" + (user_id.nil? ? "" : "&user_id=#{user_id.to_s}"))
-
-    if friends_obj['ids'].nil? # there are less than 5000 ids, just return
-      return friends_obj
-    end
-
-    friends = friends_obj['ids']
-    if !friends_obj['next_cursor_str'].nil? && friends_obj['next_cursor_str'] != "0"
-      get_followers(user,user_id, friends_obj['next_cursor_str'],friends.size).each do |friend|
-        friends << friend
-      end
-    end
-
-    friends
 
   end
 

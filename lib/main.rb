@@ -124,18 +124,18 @@ module Main
 
 
   def do_follows_for_user(user)
-    puts "doing follows for #{user.login}"
+    Rails.logger.debug "doing follows for #{user.login}"
     if should_do_follows(user) then
       users_to_follow = get_users_to_follow(user)
 
       past_friendings_size = past_friendings_one_day(user).size
-      puts "in the past day we have created #{past_friendings_size} friendings"
+      Rails.logger.debug "in the past day we have created #{past_friendings_size} friendings"
       max = 100 - past_friendings_size
       just_followed = follow_from_list(user, users_to_follow, max)
 
-      puts "for user: #{user.login}, just followed #{just_followed.to_yaml}"
+      Rails.logger.debug "for user: #{user.login}, just followed #{just_followed.to_yaml}"
     else
-      puts "too many follows for #{user.login}"
+      Rails.logger.debug "too many follows for #{user.login}"
     end
 
   end
@@ -165,7 +165,7 @@ module Main
     removables.each do |removable|
       begin
         unfriend_result = user.twitter.post("/friendships/destroy/#{removable.to_s}.json")
-        puts "unfriend result: #{unfriend_result.to_s}"
+        Rails.logger.debug "unfriend result: #{unfriend_result.to_s}"
       rescue => e
         put_error(e)
       end
@@ -176,15 +176,13 @@ module Main
     #    get the followers list for the user, get all the follows that are at least 3 days old
     # remove all the people that are following and on the friendings list
     followers = get_followers(user)
-    puts "followers:\n #{followers.sort.join(', ').to_s}"
     # get the ones we could possibly remove
     friendings = Friending.find_all_by_user_id(user.id,:order=>"created_at",:conditions=>["created_at < ?", add_days(Time.now, -3)])
-    puts "friendings followathon has created"
     friendings_ids = []
     friendings.each do |friending|
       friendings_ids << friending.follow_id
     end
-    puts friendings_ids.size.to_s
+    Rails.logger.debug "Created #{friendings_ids.size.to_s} friendings for #{user.login}"
 
     # if we arent actually following them, dont try to unfollow them
     friendings = remove_no_longer_following(friendings, user)
@@ -193,7 +191,7 @@ module Main
     removables = remove_following_from_friendings(friendings, followers)
 
     # we have found all the people that we are going to unfollow, do the unfollows
-    puts "removables (#{removables.size}): \n#{removables.sort.join(", ").to_s}"
+    Rails.logger.debug "removables (#{removables.size}): \n#{removables.sort.join(", ").to_s}"
 
     unfollow_from_list(removables, user)
 
@@ -221,13 +219,13 @@ module Main
     end
 
     if !_tweet.nil?
-      puts "For #{user.login}, we tweeted http://twitter.com/#{user.login}/statuses/#{_tweet.tweet_id}"
+      Rails.logger.debug "For #{user.login}, we tweeted http://twitter.com/#{user.login}/statuses/#{_tweet.tweet_id}"
     end
   end
 
 
   def do_deletes(user)
-    puts "doing deletes for #{user.login}"
+    Rails.logger.debug "doing deletes for #{user.login}"
 
     # get all the tweets created by this twitter app, remove them
     user_timeline = user.twitter.get("/statuses/user_timeline.json")
@@ -242,7 +240,7 @@ module Main
             _tweet.update_attribute(:deleted,true)
           end
         rescue => e
-          puts e
+          Rails.logger.debug e
         end
       end
     end
@@ -250,7 +248,7 @@ module Main
     all_non_deleted_tweets = non_deleted_tweets(user, 1,true)
     non_deleted_tweets(user, days_ago=1,has_promotion=false).each { |non_deleted_tweet| all_non_deleted_tweets << non_deleted_tweet}
     all_non_deleted_tweets.each do |non_deleted_tweet|
-      puts "found this non-deleted default tweet #{non_deleted_tweet.to_yaml}"
+      Rails.logger.debug "found this non-deleted default tweet #{non_deleted_tweet.to_yaml}"
       delete_tweet(non_deleted_tweet,user)
       non_deleted_tweet.update_attributes({:deleted=>true})
     end
@@ -267,7 +265,7 @@ module Main
       follow_lists << get_followers(user, mimic.twitter_id)
     end
 
-#    puts follow_lists.to_yaml
+#    Rails.logger.debug follow_lists.to_yaml
     follow_lists
 
   end

@@ -221,5 +221,26 @@ module Util
 
   end
 
+  def run_for_all_enabled(num_threads)
+    enabled_users = Queue.new
+    User.all_enabled.each{|user|enabled_users.push user}
+
+    threads = []
+    num_threads.to_i.times do |i|
+      threads << Thread.new do
+        while !enabled_users.empty?
+          begin
+            user = enabled_users.pop
+            yield(user,i)
+          rescue => e
+            Rails.logger.error e.message
+          end
+        end
+      end
+    end
+    threads.each{|t| t.join}
+
+  end
+
 
 end

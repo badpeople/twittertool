@@ -54,12 +54,13 @@ module Main
     friends = get_friends(user)
 
     # add all the users in the db
-    User.all_enabled_random.each do |db_user|
-      db_user_twitter_id = db_user.twitter_id.to_i
-      if !friends.include?(db_user_twitter_id) &&  !already_attempted_friending?(user, db_user_twitter_id) && db_user_twitter_id != user.twitter_id.to_i
-        users_to_follow << db_user_twitter_id
-      end
-    end
+    # disabled, people stopped liking this even though they're follower count went up.
+#    User.all_enabled_random.each do |db_user|
+#      db_user_twitter_id = db_user.twitter_id.to_i
+#      if !friends.include?(db_user_twitter_id) &&  !already_attempted_friending?(user, db_user_twitter_id) && db_user_twitter_id != user.twitter_id.to_i
+#        users_to_follow << db_user_twitter_id
+#      end
+#    end
 
     # for each keyword, get a list of users
     tweets = []

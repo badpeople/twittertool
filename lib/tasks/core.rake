@@ -5,7 +5,7 @@ namespace :follow do
   task :do_all => :environment do
     include Util
     include Main
-
+    Rails.logger.auto_flushing = true
     start_time = Time.now
     run_for_all_enabled(3) do |user,t|
       begin
@@ -21,9 +21,7 @@ namespace :follow do
       rescue => e
         Rails.logger.error e.message
       end
-    end
 
-    run_for_all_enabled(3) do |user,t|
       begin
         Rails.logger.info  "{Thread #{t}}: START doing unfollows for #{user.login}"
         do_unfollows(user)
@@ -31,7 +29,9 @@ namespace :follow do
         Rails.logger.error e.message
       end
       Rails.logger.info  "{Thread #{t}}: END doing unfollows for #{user.login}"
+
     end
+
 
     num_users = User.all_enabled.size
     Rails.logger.info "for #{num_users} users it to took #{Time.now - start_time}"
@@ -62,13 +62,15 @@ namespace :follow do
   task :do_tweets =>:environment do
     include Main
     include Util
+    Rails.logger.auto_flushing = true
+    
 
     User.all_enabled.each do |user|
       begin
-        puts "doing tweets for #{user.login}"
+        Rails.logger.info "doing tweets for #{user.login}"
         do_tweet(user)
       rescue =>e
-        put_error(e)
+        Rails.logger.error e.message
       end
     end
   end
